@@ -5,6 +5,8 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   css: ['~/assets/css/tailwind.css'],
   app: {
+    pageTransition: { name: 'fade', mode: 'out-in' },
+    layoutTransition: { name: 'fade', mode: 'out-in' },
     head: {
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

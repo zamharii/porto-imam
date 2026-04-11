@@ -1,5 +1,5 @@
 <template>
-  <main class="min-h-screen bg-white">
+  <main v-fade-in class="min-h-screen bg-white">
     <div class="px-4 sm:px-6">
       <div class="project-hero" :style="themeStyles.heroVars">
         <header class="mx-auto max-w-6xl pt-10">

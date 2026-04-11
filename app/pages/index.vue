@@ -74,6 +74,7 @@
       <div class="mx-auto max-w-6xl px-6 pb-24 sm:pb-28 lg:pb-32">
         <div
           ref="aboutCard"
+          v-fade-in
           class="relative z-20 rounded-3xl bg-white p-6 shadow-2xl shadow-slate-200/60 ring-1 ring-slate-200/60 sm:p-10"
           :style="{ marginTop: `${-aboutCardOverlap}px` }"
         >
@@ -119,7 +120,7 @@
       </div>
     </section>
 
-    <section class="relative z-10 bg-slate-100/70 py-20 sm:py-24">
+    <section v-fade-in class="relative z-10 bg-slate-100/70 py-20 sm:py-24">
       <div class="mx-auto max-w-6xl px-6">
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
           <div class="pt-2">
@@ -188,7 +189,7 @@
       </div>
     </section>
 
-    <section class="bg-white py-20 sm:py-24">
+    <section v-fade-in class="bg-white py-20 sm:py-24">
       <div class="mx-auto max-w-6xl px-6">
         <div class="text-center">
           <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Portfolio</h3>
@@ -200,8 +201,9 @@
 
         <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <article
-            v-for="item in portfolioItems.slice(0, 6)"
+            v-for="(item, index) in portfolioItems.slice(0, 6)"
             :key="item.title"
+            v-fade-in="{ delay: index * 80 }"
             class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100"
           >
             <div class="aspect-[16/10] overflow-hidden bg-slate-200">
@@ -238,7 +240,7 @@
       </div>
     </section>
 
-    <section class="bg-gradient-to-r from-[#FBFAF5] via-white to-[#FFF5CC] py-24 sm:py-28 lg:py-32">
+    <section v-fade-in class="bg-gradient-to-r from-[#FBFAF5] via-white to-[#FFF5CC] py-24 sm:py-28 lg:py-32">
       <div class="relative mx-auto max-w-6xl px-6">
         <div class="text-center">
           <h3 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">Freelance</h3>
@@ -250,8 +252,9 @@
 
         <div class="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-3">
           <article
-            v-for="item in freelanceItems"
+            v-for="(item, index) in freelanceItems"
             :key="item.name"
+            v-fade-in="{ delay: index * 90 }"
             class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200/70 transition hover:-translate-y-1 hover:shadow-lg"
           >
             <div class="aspect-[424/250] overflow-hidden">
@@ -296,7 +299,7 @@
       </div>
     </section>
 
-    <section class="bg-slate-100/70 py-20 sm:py-24">
+    <section v-fade-in class="bg-slate-100/70 py-20 sm:py-24">
       <div class="mx-auto max-w-6xl px-6">
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
           <div class="pt-2">
@@ -340,7 +343,7 @@
       </div>
     </section>
 
-      <section class="bg-white pt-20 sm:pt-24">
+      <section v-fade-in class="bg-white pt-20 sm:pt-24">
         <div class="mx-auto max-w-6xl px-6 pb-16 sm:pb-20">
           <div class="text-center">
             <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Clients</h3>
@@ -351,8 +354,9 @@
 
         <div class="mt-12 flex flex-wrap items-center justify-center gap-x-16 gap-y-10">
           <img
-            v-for="client in clientLogos"
+            v-for="(client, index) in clientLogos"
             :key="client.name"
+            v-fade-in="{ delay: index * 80 }"
             class="h-24 w-auto object-contain opacity-95 sm:h-28"
             :src="client.src"
             :alt="client.name"
@@ -363,7 +367,7 @@
         </div>
       </section>
 
-      <section class="relative overflow-hidden bg-[#2F3F55] text-white">
+      <section v-fade-in class="relative overflow-hidden bg-[#2F3F55] text-white">
         <div class="pointer-events-none absolute inset-0" aria-hidden="true">
           <div class="absolute inset-0 bg-gradient-to-b from-[#2F3F55] to-[#27364A]" />
           <div
