@@ -1,5 +1,21 @@
 <template>
   <main class="min-h-screen bg-[#FBFAF5]">
+    <!-- SECTION 1 -->
+    <section
+      class="relative min-h-screen w-full bg-[#FBFAF5] bg-no-repeat bg-center bg-contain md:bg-cover"
+      style="background-image: url('/img/hero/background-header.svg')"
+    >
+      <!-- Floating Image -->
+      <div class="absolute inset-0 flex items-center justify-center">
+        <img
+          src="/img/hero/text-portofolio.svg"
+          alt="Portfolio Text"
+          class="w-[120%] sm:w-[110%] md:w-[95%] lg:w-[80%] xl:w-[70%] transition-transform duration-500 ease-out animate-float hover:scale-105 hover:-translate-y-3 hover:rotate-1"
+        />
+      </div>
+    </section>
+
+    <!-- SECTION 2 (About Me) -->
     <section class="relative isolate overflow-hidden bg-gradient-to-r from-[#FBFAF5] via-white to-[#FFF5CC]">
       <div
         class="pointer-events-none absolute -left-40 -bottom-40 -z-10 h-[28rem] w-[28rem] rounded-full bg-[#FFD45A]/25 blur-3xl"
@@ -519,3 +535,18 @@ onBeforeUnmount(() => {
   resizeObserver = null
 })
 </script>
+
+<style>
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+</style>
