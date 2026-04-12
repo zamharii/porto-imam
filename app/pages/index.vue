@@ -1,96 +1,39 @@
 <template>
   <main class="min-h-screen bg-[#FBFAF5]">
+    
     <!-- SECTION 1 -->
     <section
       class="relative min-h-screen w-full bg-[#FBFAF5] bg-no-repeat bg-center bg-contain md:bg-cover"
       style="background-image: url('/img/hero/background-header.svg')"
     >
-      <!-- Floating Image -->
       <div class="absolute inset-0 flex items-center justify-center">
+
+        <!-- TEXT PORTOFOLIO (STATIC) -->
         <img
           src="/img/hero/text-portofolio.svg"
           alt="Portfolio Text"
-          class="w-[120%] sm:w-[110%] md:w-[95%] lg:w-[80%] xl:w-[70%] transition-transform duration-500 ease-out animate-float hover:scale-105 hover:-translate-y-3 hover:rotate-1"
+          class="w-[120%] sm:w-[110%] md:w-[95%] lg:w-[80%] xl:w-[70%]"
         />
+
+        <!-- UIUX TEXT (FLOATING) -->
+        <img
+          src="/img/hero/uiux-design-text.svg"
+          alt="UIUX Design"
+          class="absolute z-10
+                w-[45%] sm:w-[35%] md:w-[25%] lg:w-[20%]
+                top-[18%] left-[18%]
+                animate-float-slow"
+        />
+
       </div>
     </section>
 
-    <!-- SECTION 2 (About Me) -->
-    <section class="relative isolate overflow-hidden bg-gradient-to-r from-[#FBFAF5] via-white to-[#FFF5CC]">
-      <div
-        class="pointer-events-none absolute -left-40 -bottom-40 -z-10 h-[28rem] w-[28rem] rounded-full bg-[#FFD45A]/25 blur-3xl"
-      />
-      <div
-        class="relative mx-auto flex min-h-screen max-w-6xl items-center px-6 py-16 pb-56"
-        :style="{ paddingBottom: `${heroBottomPadding}px` }"
-      >
-        <div class="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <div>
-            <h1 class="relative inline-block text-slate-900">
-              <span
-                class="absolute -left-6 top-4 z-10 inline-flex -rotate-6 items-center rounded-sm bg-[#FFD45A] px-4 py-2 text-sm font-medium tracking-wide text-white shadow-sm sm:-left-10 sm:top-7 md:-left-12 md:top-8 lg:-left-14 lg:top-8"
-              >
-                Product Designer
-              </span>
-
-              <span class="relative block pt-12 font-extrabold leading-[0.92] tracking-tight sm:pt-14">
-                <span class="block text-6xl sm:text-7xl lg:text-8xl">PORT</span>
-                <span class="block text-6xl sm:text-7xl lg:text-8xl">FOLIO.</span>
-
-                <span
-                  class="pointer-events-none absolute left-[92%] top-[56%] -translate-x-1/2 -translate-y-1/2 select-none text-6xl italic text-[#FFD45A]/70 sm:text-7xl lg:text-8xl"
-                  style="font-family: 'Dancing Script', cursive"
-                  aria-hidden="true"
-                >
-                  Portfolio
-                </span>
-              </span>
-            </h1>
-
-            <p class="mt-5 max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">
-              Saya adalah Product Designer atau UI/UX Designer lepas berbasis di Medan, Indonesia. Berfokus pada
-              perancangan pengalaman pengguna yang intuitif dan antarmuka yang menarik melalui pendekatan design
-              thinking, serta mengembangkan solusi desain menggunakan Figma yang berpusat pada pengguna.
-            </p>
-
-            <div
-              class="mt-10 inline-grid grid-cols-3 overflow-hidden border border-white/60 bg-[#FFF2D880] shadow-sm backdrop-blur"
-            >
-              <div class="border-l-4 border-[#FFD45A] px-8 py-6 text-center">
-                <div class="text-2xl font-bold text-slate-800">4+ Y.</div>
-                <div class="mt-1 text-xs tracking-wide text-slate-500">Experience</div>
-              </div>
-              <div class="border-l border-white/70 px-8 py-6 text-center">
-                <div class="text-2xl font-bold text-slate-800">10+</div>
-                <div class="mt-1 text-xs tracking-wide text-slate-500">Project</div>
-              </div>
-              <div class="border-l border-white/70 px-8 py-6 text-center">
-                <div class="text-2xl font-bold text-slate-800">3+</div>
-                <div class="mt-1 text-xs tracking-wide text-slate-500">Client</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex justify-center lg:justify-end">
-            <div class="w-full max-w-sm sm:max-w-md lg:translate-y-8">
-              <img
-                class="h-auto w-full object-contain drop-shadow-2xl"
-                src="/img/hero/hero-imam.webp"
-                alt="Foto Imam Zamhari"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <!-- ✅ ABOUT CARD FIX -->
     <section class="bg-slate-100/70">
-      <div class="mx-auto max-w-6xl px-6 pb-24 sm:pb-28 lg:pb-32">
-        <div
+      <div class="mx-auto max-w-6xl px-6 pb-24">
+        <ClientOnly>
+          <div
           ref="aboutCard"
-          v-fade-in
           class="relative z-20 rounded-3xl bg-white p-6 shadow-2xl shadow-slate-200/60 ring-1 ring-slate-200/60 sm:p-10"
           :style="{ marginTop: `${-aboutCardOverlap}px` }"
         >
@@ -133,10 +76,13 @@
             </div>
           </div>
         </div>
+        </ClientOnly>
       </div>
     </section>
 
-    <section v-fade-in class="relative z-10 bg-slate-100/70 py-20 sm:py-24">
+    <!-- ✅ WORK PROCESS FIX -->
+    <ClientOnly>
+      <section class="relative z-10 bg-slate-100/70 py-20 sm:py-24">
       <div class="mx-auto max-w-6xl px-6">
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
           <div class="pt-2">
@@ -204,8 +150,11 @@
         </div>
       </div>
     </section>
+    </ClientOnly>
 
-    <section v-fade-in class="bg-white py-20 sm:py-24">
+    <!-- ✅ PORTFOLIO FIX -->
+    <ClientOnly>
+      <section class="bg-white py-20 sm:py-24">
       <div class="mx-auto max-w-6xl px-6">
         <div class="text-center">
           <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Portfolio</h3>
@@ -219,7 +168,6 @@
           <article
             v-for="(item, index) in portfolioItems.slice(0, 6)"
             :key="item.title"
-            v-fade-in="{ delay: index * 80 }"
             class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100"
           >
             <div class="aspect-[16/10] overflow-hidden bg-slate-200">
@@ -255,8 +203,11 @@
         </div>
       </div>
     </section>
+    </ClientOnly>
 
-    <section v-fade-in class="bg-gradient-to-r from-[#FBFAF5] via-white to-[#FFF5CC] py-24 sm:py-28 lg:py-32">
+    <!-- ✅ FREELANCE FIX -->
+    <ClientOnly>
+      <section class="bg-gradient-to-r from-[#FBFAF5] via-white to-[#FFF5CC] py-24 sm:py-28 lg:py-32">
       <div class="relative mx-auto max-w-6xl px-6">
         <div class="text-center">
           <h3 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">Freelance</h3>
@@ -270,7 +221,6 @@
           <article
             v-for="(item, index) in freelanceItems"
             :key="item.name"
-            v-fade-in="{ delay: index * 90 }"
             class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200/70 transition hover:-translate-y-1 hover:shadow-lg"
           >
             <div class="aspect-[424/250] overflow-hidden">
@@ -314,8 +264,11 @@
         </div>
       </div>
     </section>
+    </ClientOnly>
 
-    <section v-fade-in class="bg-slate-100/70 py-20 sm:py-24">
+    <!-- ✅ WHAT I DO -->
+    <ClientOnly>
+      <section class="bg-slate-100/70 py-20 sm:py-24">
       <div class="mx-auto max-w-6xl px-6">
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
           <div class="pt-2">
@@ -358,8 +311,11 @@
         </div>
       </div>
     </section>
+    </ClientOnly>
 
-      <section v-fade-in class="bg-white pt-20 sm:pt-24">
+    <!-- ✅ CLIENTS -->
+    <ClientOnly>
+      <section class="bg-white pt-20 sm:pt-24">
         <div class="mx-auto max-w-6xl px-6 pb-16 sm:pb-20">
           <div class="text-center">
             <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Clients</h3>
@@ -372,7 +328,6 @@
           <img
             v-for="(client, index) in clientLogos"
             :key="client.name"
-            v-fade-in="{ delay: index * 80 }"
             class="h-24 w-auto object-contain opacity-95 sm:h-28"
             :src="client.src"
             :alt="client.name"
@@ -382,8 +337,11 @@
           </div>
         </div>
       </section>
+    </ClientOnly>
 
-      <section v-fade-in class="relative overflow-hidden bg-[#2F3F55] text-white">
+    <!-- ✅ FOOTER -->
+    <ClientOnly>
+      <section class="relative overflow-hidden bg-[#2F3F55] text-white">
         <div class="pointer-events-none absolute inset-0" aria-hidden="true">
           <div class="absolute inset-0 bg-gradient-to-b from-[#2F3F55] to-[#27364A]" />
           <div
@@ -404,7 +362,9 @@
           </a>
         </div>
       </section>
-    </main>
+    </ClientOnly>
+
+  </main>
 </template>
 
 <script setup lang="ts">
