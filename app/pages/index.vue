@@ -1,340 +1,556 @@
 <template>
   <main class="min-h-screen bg-[#FBFAF5]">
     
-    <!-- SECTION 1 -->
+    <!-- HERO SECTION -->
     <section
       class="relative min-h-screen w-full bg-[#FBFAF5] bg-no-repeat bg-center bg-contain md:bg-cover"
       style="background-image: url('/img/hero/background-header.svg')"
-    >
-      <div class="absolute inset-0 flex items-center justify-center">
+    > 
+      <div class="absolute inset-0 flex items-center justify-center group -translate-y-14 md:-translate-y-20">
 
-        <!-- TEXT PORTOFOLIO (STATIC) -->
+        <!-- TEXT PORTOFOLIO -->
         <img
           src="/img/hero/text-portofolio.svg"
           alt="Portfolio Text"
           class="w-[120%] sm:w-[110%] md:w-[95%] lg:w-[80%] xl:w-[70%]"
         />
 
-        <!-- UIUX TEXT (FLOATING) -->
+        <!-- UIUX FLOATING -->
         <img
           src="/img/hero/uiux-design-text.svg"
           alt="UIUX Design"
           class="absolute z-10
                 w-[45%] sm:w-[35%] md:w-[25%] lg:w-[20%]
                 top-[18%] left-[18%]
-                animate-float-slow"
+                animate-float-slow
+                transition-all duration-[800ms]
+                group-hover:translate-x-6"
+          style="transition-timing-function: cubic-bezier(0, 0, 0.08, 1.34);"
         />
 
       </div>
     </section>
 
-    <!-- ✅ ABOUT CARD FIX -->
+    <!-- ABOUT SECTION -->
     <section class="bg-slate-100/70">
-      <div class="mx-auto max-w-6xl px-6 pb-24">
+      <div class="mx-auto max-w-[1200px] px-6 sm:px-10 lg:px-12 pb-32 -mt-40 sm:-mt-44 md:-mt-52 lg:-mt-60">
+        
         <ClientOnly>
           <div
-          ref="aboutCard"
-          class="relative z-20 rounded-3xl bg-white p-6 shadow-2xl shadow-slate-200/60 ring-1 ring-slate-200/60 sm:p-10"
-          :style="{ marginTop: `${-aboutCardOverlap}px` }"
-        >
-          <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-            <div class="flex justify-center lg:justify-start">
-              <div class="w-full max-w-xs sm:max-w-sm">
-                <img
-                  class="h-auto w-full object-contain drop-shadow-xl"
-                  src="/img/about/about-picture-social-media.webp"
-                  alt="About picture"
-                  loading="lazy"
-                  decoding="async"
-                />
+            class="relative z-30 rounded-3xl bg-white/90 backdrop-blur p-6 sm:p-10 lg:p-12 shadow-2xl shadow-slate-200/60 ring-1 ring-slate-200/60"
+          >
+
+            <!-- GRID -->
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.2fr] items-center">
+
+              <!-- IMAGE -->
+              <div class="flex justify-center lg:justify-start -mt-6 lg:-mt-8">
+                <div class="w-full max-w-[320px] sm:max-w-sm lg:max-w-md">
+                  <img
+                    class="h-auto w-full object-contain"
+                    src="/img/about/Asli Hover.png"
+                    alt="About picture"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+
+              <!-- TEXT -->
+              <div>
+
+                <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                  About Me
+                </h2>
+
+                <p class="mt-5 text-sm leading-relaxed text-slate-600 sm:text-base">
+                  Hai, saya Imam Zamhari, seorang Desainer Produk / Desainer UI/UX yang berbasis di Indonesia.
+                  Saya senang mengeksplorasi ide dan mengubahnya menjadi pengalaman digital yang intuitif dan ramah pengguna.
+                </p>
+
+                <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+                  Saya bersemangat tentang desain yang berpusat pada pengguna dan selalu ingin belajar, berkembang,
+                  dan berkolaborasi di industri kreatif.
+                </p>
+
+                <!-- WORK EXPERIENCE -->
+                <div class="mt-8">
+                  <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">
+                    Work experience
+                  </h3>
+
+                  <div class="mt-5 space-y-6">
+
+                    <div>
+                      <div class="font-semibold text-slate-900">
+                        PT. Sustainable Living Lab
+                      </div>
+                      <div class="text-xs text-slate-400">
+                        May 2024 - April 2026 • UI UX Design
+                      </div>
+                      <p class="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
+                        Bandung Institute of Technology (ITB) Science and Techno Park (STP) Building, 3rd Floor
+                      </p>
+                    </div>
+
+                    <div>
+                      <div class="font-semibold text-slate-900">
+                        PT. Satria Nusa Enjinering
+                      </div>
+                      <div class="text-xs text-slate-400">
+                        Dec 2023 - May 2024 • UI UX Design
+                      </div>
+                      <p class="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
+                        Jl. R.A Kartini II, No. 11 Madras Hulu Medan, Sumatera Utara 20152
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+
               </div>
             </div>
 
-            <div>
-              <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">About Me</h2>
+            <!-- STATS -->
+            <div class="mt-8 flex justify-center">
+              <div class="w-full max-w-md flex overflow-hidden rounded-xl border border-white">
 
-              <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
-                Berfokus pada perancangan tampilan dan alur penggunaan yang sederhana, jelas, dan mudah dipahami.
-                Memiliki minat dalam pengembangan situs web dan produk digital dengan pendekatan yang terstruktur.
-              </p>
+                <div class="flex-1 bg-[#FCF7E9] px-5 py-5 text-center border-l-4 border-[#FFD45A]">
+                  <div class="text-lg sm:text-xl font-extrabold text-slate-900">4+ Y.</div>
+                  <div class="text-xs text-slate-500 mt-1">Experience</div>
+                </div>
 
-              <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
-                Mengerjakan desain untuk website dan layanan digital, mulai dari tahap perencanaan hingga hasil
-                akhir. Terus belajar untuk meningkatkan kualitas desain agar lebih sesuai dengan kebutuhan pengguna.
-              </p>
+                <div class="flex-1 bg-[#FCF7E9] px-5 py-5 text-center border-l border-white">
+                  <div class="text-lg sm:text-xl font-extrabold text-slate-900">8%</div>
+                  <div class="text-xs text-slate-500 mt-1">Project</div>
+                </div>
 
-              <div class="mt-7">
-                <a
-                  href="/cv/cv-imam-zamhari.pdf"
-                  download="CV-Imam-Zamhari.pdf"
-                  class="inline-flex items-center gap-2 rounded-md bg-[#FFD45A] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#FFD45A] focus:outline-none focus:ring-2 focus:ring-[#FFD45A] focus:ring-offset-2"
-                >
-                  <span class="material-symbols-outlined text-[18px] leading-none">download</span>
-                  Download CV
-                </a>
+                <div class="flex-1 bg-[#FCF7E9] px-5 py-5 text-center border-l border-white">
+                  <div class="text-lg sm:text-xl font-extrabold text-slate-900">3+</div>
+                  <div class="text-xs text-slate-500 mt-1">Client</div>
+                </div>
+
               </div>
             </div>
+
+            <!-- BUTTON -->
+            <div class="absolute left-1/2 -bottom-6 -translate-x-1/2">
+              <a
+                href="/cv/cv-imam-zamhari.pdf"
+                download="CV-Imam-Zamhari.pdf"
+                class="inline-flex items-center gap-2 rounded-md bg-[#FFD45A] px-6 py-3 text-sm font-semibold text-white shadow-lg transition md:hover:bg-[#FFC83A]"
+              >
+                <span class="material-symbols-outlined text-[18px] leading-none">
+                  download
+                </span>
+                Download CV
+              </a>
+            </div>
+
           </div>
-        </div>
         </ClientOnly>
+
       </div>
     </section>
 
-    <!-- ✅ WORK PROCESS FIX -->
+    <!-- ✅ WORK PROCESS -->
     <ClientOnly>
       <section class="relative z-10 bg-slate-100/70 py-20 sm:py-24">
-      <div class="mx-auto max-w-6xl px-6">
-        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
-          <div class="pt-2">
-            <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Work Process</h3>
-            <p class="mt-5 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base">
-              Proses kerja saya dimulai dengan memahami kebutuhan pengguna dan tujuan produk secara menyeluruh.
-              Setiap tahap dilakukan secara terstruktur untuk memastikan solusi yang dihasilkan relevan dan mudah
-              digunakan.
-            </p>
-            <p class="mt-4 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base">
-              Pendekatan yang saya gunakan berfokus pada pengguna, mulai dari riset hingga implementasi, dengan
-              tujuan menghasilkan desain yang fungsional dan konsisten.
-            </p>
-          </div>
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
 
-          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:grid-rows-2 sm:grid-flow-col">
-            <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
-              <div
-                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A] transition-colors hover:bg-[#FFD45A] hover:text-white"
-              >
-                <span class="material-symbols-outlined text-[22px] leading-none">calendar_month</span>
-              </div>
-              <h4 class="mt-5 text-base font-extrabold text-slate-900">1. Research</h4>
-              <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                Mengumpulkan kebutuhan pengguna dan tujuan produk secara terstruktur.
+            <!-- LEFT CONTENT (CENTERED) -->
+            <div class="pt-2 lg:pt-0 flex flex-col justify-center">
+              <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                Work Process
+              </h3>
+
+              <p class="mt-5 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base">
+                Proses kerja saya dimulai dengan memahami kebutuhan pengguna dan tujuan produk secara menyeluruh.
+                Setiap tahap dilakukan secara terstruktur untuk memastikan solusi yang dihasilkan relevan dan mudah digunakan.
+              </p>
+
+              <p class="mt-4 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base">
+                Pendekatan yang saya gunakan berfokus pada pengguna, mulai dari riset hingga implementasi,
+                dengan tujuan menghasilkan desain yang fungsional dan konsisten.
               </p>
             </div>
 
-            <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
-              <div
-                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A] transition-colors hover:bg-[#FFD45A] hover:text-white"
-              >
-                <span class="material-symbols-outlined text-[22px] leading-none">brush</span>
-              </div>
-              <h4 class="mt-5 text-base font-extrabold text-slate-900">2. Design</h4>
-              <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                Menyusun wireframe dan desain visual yang sederhana dan konsisten.
-              </p>
-            </div>
+            <!-- RIGHT CARDS -->
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:grid-rows-2 sm:grid-flow-col group">
 
-            <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+              <!-- CARD 1 -->
               <div
-                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A] transition-colors hover:bg-[#FFD45A] hover:text-white"
-              >
-                <span class="material-symbols-outlined text-[22px] leading-none">monitoring</span>
-              </div>
-              <h4 class="mt-5 text-base font-extrabold text-slate-900">3. Analyze</h4>
-              <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                Mengevaluasi desain melalui feedback dan pengujian secara berkala.
-              </p>
-            </div>
+                class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100
+                      transition-all duration-300
 
-            <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
-              <div
-                class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A] transition-colors hover:bg-[#FFD45A] hover:text-white"
+                      md:group-hover:opacity-40 md:group-hover:scale-[0.98]
+                      md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl"
               >
-                <span class="material-symbols-outlined text-[22px] leading-none">rocket_launch</span>
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A]">
+                  <span class="material-symbols-outlined text-[22px] leading-none">calendar_month</span>
+                </div>
+
+                <h4 class="mt-5 text-base font-extrabold text-slate-900">1. Research</h4>
+                <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                  Mengumpulkan kebutuhan pengguna dan tujuan produk secara terstruktur.
+                </p>
               </div>
-              <h4 class="mt-5 text-base font-extrabold text-slate-900">4. Launch</h4>
-              <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                Menyiapkan desain untuk pengembangan dan implementasi yang sesuai.
-              </p>
+
+              <!-- CARD 2 -->
+              <div
+                class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100
+                      transition-all duration-300
+
+                      md:group-hover:opacity-40 md:group-hover:scale-[0.98]
+                      md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl"
+              >
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A]">
+                  <span class="material-symbols-outlined text-[22px] leading-none">brush</span>
+                </div>
+
+                <h4 class="mt-5 text-base font-extrabold text-slate-900">2. Design</h4>
+                <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                  Menyusun wireframe dan desain visual yang sederhana dan konsisten.
+                </p>
+              </div>
+
+              <!-- CARD 3 -->
+              <div
+                class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100
+                      transition-all duration-300
+
+                      md:group-hover:opacity-40 md:group-hover:scale-[0.98]
+                      md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl"
+              >
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A]">
+                  <span class="material-symbols-outlined text-[22px] leading-none">monitoring</span>
+                </div>
+
+                <h4 class="mt-5 text-base font-extrabold text-slate-900">3. Analyze</h4>
+                <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                  Mengevaluasi desain melalui feedback dan pengujian secara berkala.
+                </p>
+              </div>
+
+              <!-- CARD 4 -->
+              <div
+                class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100
+                      transition-all duration-300
+
+                      md:group-hover:opacity-40 md:group-hover:scale-[0.98]
+                      md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl"
+              >
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A]">
+                  <span class="material-symbols-outlined text-[22px] leading-none">rocket_launch</span>
+                </div>
+
+                <h4 class="mt-5 text-base font-extrabold text-slate-900">4. Launch</h4>
+                <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                  Menyiapkan desain untuk pengembangan dan implementasi yang sesuai.
+                </p>
+              </div>
+
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </ClientOnly>
 
     <!-- ✅ PORTFOLIO FIX -->
     <ClientOnly>
       <section class="bg-white py-20 sm:py-24">
-      <div class="mx-auto max-w-6xl px-6">
-        <div class="text-center">
-          <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Portfolio</h3>
-          <p class="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base">
-            Menampilkan beberapa proyek desain yang telah dikerjakan, dengan fokus pada pengalaman pengguna,
-            tampilan yang jelas, dan solusi yang sesuai kebutuhan.
-          </p>
-        </div>
+        <div class="mx-auto max-w-6xl px-6">
+          
+          <!-- HEADER -->
+          <div class="text-center">
+            <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+              Portfolio
+            </h3>
+            <p class="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base">
+              Menampilkan beberapa proyek desain yang telah dikerjakan, dengan fokus pada pengalaman pengguna,
+              tampilan yang jelas, dan solusi yang sesuai kebutuhan.
+            </p>
+          </div>
 
-        <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <article
-            v-for="(item, index) in portfolioItems.slice(0, 6)"
-            :key="item.title"
-            class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-100"
-          >
-            <div class="aspect-[16/10] overflow-hidden bg-slate-200">
-              <img
-                class="h-full w-full object-cover"
-                :src="item.image"
-                :alt="item.title"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+          <!-- GRID -->
+          <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            
+            <article
+              v-for="(item, index) in portfolioItems.slice(0, 6)"
+              :key="item.title"
+              class="group overflow-hidden rounded-2xl bg-white ring-1 ring-slate-100
+                    transition-all duration-300
 
-            <div class="p-6">
-              <div class="text-xs font-semibold tracking-widest text-slate-400">{{ item.category }}</div>
-              <h4 class="mt-2 text-lg font-extrabold text-slate-900">{{ item.title }}</h4>
-              <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                {{ item.description }}
-              </p>
-
-              <div class="mt-6">
-                <a
-                  :href="item.href"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center gap-2 rounded-md bg-[#FFD45A] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#FFD45A] focus:outline-none focus:ring-2 focus:ring-[#FFD45A] focus:ring-offset-2"
-                >
-                  {{ item.buttonLabel ?? 'View' }}
-                  <span class="material-symbols-outlined text-[18px] leading-none">arrow_forward</span>
-                </a>
+                    md:hover:-translate-y-2
+                    md:hover:shadow-xl md:hover:shadow-slate-200/70"
+            >
+              <!-- IMAGE -->
+              <div class="aspect-[16/10] overflow-hidden bg-slate-200">
+                <img
+                  class="h-full w-full object-cover transition-transform duration-500 md:group-hover:scale-105"
+                  :src="item.image"
+                  :alt="item.title"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-            </div>
-          </article>
+
+              <!-- CONTENT -->
+              <div class="p-6">
+                <div class="text-xs font-semibold tracking-widest text-slate-400">
+                  {{ item.category }}
+                </div>
+
+                <h4 class="mt-2 text-lg font-extrabold text-slate-900">
+                  {{ item.title }}
+                </h4>
+
+                <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                  {{ item.description }}
+                </p>
+
+                <!-- BUTTON -->
+                <div class="mt-6">
+                  <a
+                    :href="item.href"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 rounded-md bg-[#FFD45A] px-5 py-3 text-sm font-semibold text-white
+                          transition-all duration-300
+
+                          md:group-hover:translate-x-1
+                          hover:bg-[#FFD45A]
+                          focus:outline-none focus:ring-2 focus:ring-[#FFD45A] focus:ring-offset-2"
+                  >
+                    {{ item.buttonLabel ?? 'View' }}
+                    <span class="material-symbols-outlined text-[18px] leading-none">
+                      arrow_forward
+                    </span>
+                  </a>
+                </div>
+
+              </div>
+            </article>
+
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </ClientOnly>
 
     <!-- ✅ FREELANCE FIX -->
     <ClientOnly>
       <section class="bg-gradient-to-r from-[#FBFAF5] via-white to-[#FFF5CC] py-24 sm:py-28 lg:py-32">
-      <div class="relative mx-auto max-w-6xl px-6">
-        <div class="text-center">
-          <h3 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">Freelance</h3>
-          <p class="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base">
-            Beberapa proyek freelance yang telah dikerjakan, mencakup desain aplikasi dan website dengan berbagai
-            kebutuhan pengguna.
-          </p>
-        </div>
+        <div class="relative mx-auto max-w-6xl px-6">
 
-        <div class="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-3">
-          <article
-            v-for="(item, index) in freelanceItems"
-            :key="item.name"
-            class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200/70 transition hover:-translate-y-1 hover:shadow-lg"
-          >
-            <div class="aspect-[424/250] overflow-hidden">
-              <img
-                class="h-full w-full object-cover"
-                :src="item.image"
-                :alt="`Preview ${item.name}`"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+          <!-- HEADER -->
+          <div class="text-center">
+            <h3 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+              Freelance
+            </h3>
+            <p class="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base">
+              Beberapa proyek freelance yang telah dikerjakan, mencakup desain aplikasi dan website dengan berbagai
+              kebutuhan pengguna.
+            </p>
+          </div>
 
-            <div class="flex flex-1 flex-col p-7">
-              <div class="text-sm text-slate-400">{{ item.name }}</div>
-              <h4 class="mt-2 text-base font-extrabold text-slate-900 sm:text-lg">{{ item.title }}</h4>
-              <p class="mt-3 text-sm leading-relaxed text-slate-600">
-                {{ item.description }}
-              </p>
+          <!-- GRID -->
+          <div class="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-3">
 
-              <div class="mt-auto flex justify-end pt-8">
-                <NuxtLink
-                  v-if="item.to"
-                  :to="item.to"
-                  :aria-label="`Lihat detail ${item.name}`"
-                  class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#FFD45A] text-white shadow-sm transition hover:bg-[#FFC83A] focus:outline-none focus:ring-2 focus:ring-[#FFD45A] focus:ring-offset-2 sm:h-12 sm:w-12"
-                >
-                  <span class="material-symbols-outlined text-[20px] leading-none">arrow_forward</span>
-                </NuxtLink>
+            <article
+              v-for="(item, index) in freelanceItems"
+              :key="item.name"
+              class="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200/70 transition
 
-                <a
-                  v-else
-                  :href="`mailto:zamhariimam0@gmail.com?subject=${encodeURIComponent('Freelance - ' + item.name)}`"
-                  :aria-label="`Kontak untuk proyek ${item.name}`"
-                  class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#FFD45A] text-white shadow-sm transition hover:bg-[#FFC83A] focus:outline-none focus:ring-2 focus:ring-[#FFD45A] focus:ring-offset-2 sm:h-12 sm:w-12"
-                >
-                  <span class="material-symbols-outlined text-[20px] leading-none">arrow_forward</span>
-                </a>
+                    md:hover:-translate-y-1 md:hover:shadow-lg"
+            >
+              <!-- IMAGE -->
+              <div class="aspect-[424/250] overflow-hidden">
+                <img
+                  class="h-full w-full object-cover"
+                  :src="item.image"
+                  :alt="`Preview ${item.name}`"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-            </div>
-          </article>
+
+              <!-- CONTENT -->
+              <div class="flex flex-1 flex-col p-7">
+                <div class="text-sm text-slate-400">
+                  {{ item.name }}
+                </div>
+
+                <h4 class="mt-2 text-base font-extrabold text-slate-900 sm:text-lg">
+                  {{ item.title }}
+                </h4>
+
+                <p class="mt-3 text-sm leading-relaxed text-slate-600">
+                  {{ item.description }}
+                </p>
+
+                <!-- BUTTON -->
+                <div class="mt-auto flex justify-end pt-8">
+                  
+                  <!-- INTERNAL -->
+                  <NuxtLink
+                    v-if="item.to"
+                    :to="item.to"
+                    :aria-label="`Lihat detail ${item.name}`"
+                    class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#FFD45A] text-white shadow-sm transition
+                          md:hover:bg-[#FFC83A]
+                          focus:outline-none focus:ring-2 focus:ring-[#FFD45A] focus:ring-offset-2 sm:h-12 sm:w-12"
+                  >
+                    <span class="material-symbols-outlined text-[20px] leading-none">
+                      arrow_forward
+                    </span>
+                  </NuxtLink>
+
+                  <!-- EMAIL -->
+                  <a
+                    v-else
+                    :href="`mailto:zamhariimam0@gmail.com?subject=${encodeURIComponent('Freelance - ' + item.name)}`"
+                    :aria-label="`Kontak untuk proyek ${item.name}`"
+                    class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#FFD45A] text-white shadow-sm transition
+                          md:hover:bg-[#FFC83A]
+                          focus:outline-none focus:ring-2 focus:ring-[#FFD45A] focus:ring-offset-2 sm:h-12 sm:w-12"
+                  >
+                    <span class="material-symbols-outlined text-[20px] leading-none">
+                      arrow_forward
+                    </span>
+                  </a>
+
+                </div>
+              </div>
+            </article>
+
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </ClientOnly>
 
     <!-- ✅ WHAT I DO -->
     <ClientOnly>
       <section class="bg-slate-100/70 py-20 sm:py-24">
-      <div class="mx-auto max-w-6xl px-6">
-        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
-          <div class="pt-2">
-            <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">What I do?</h3>
-            <p class="mt-5 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base">
-              Berfokus pada perancangan pengalaman pengguna dan tampilan antarmuka yang sederhana, jelas, dan mudah
-              digunakan. Setiap desain dibuat dengan pendekatan terstruktur agar sesuai dengan kebutuhan pengguna dan
-              tujuan produk.
-            </p>
-            <p class="mt-4 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base">
-              Mengerjakan berbagai proyek desain digital, mulai dari website hingga dashboard, dengan perhatian pada
-              detail, konsistensi, dan kemudahan penggunaan.
-            </p>
-          </div>
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
 
-          <div class="space-y-6">
-            <div
-              class="relative overflow-hidden rounded-sm bg-white py-7 pl-12 pr-7 shadow-xl shadow-slate-200/60 ring-1 ring-slate-100"
-            >
-              <div class="absolute bottom-0 left-0 top-0 w-1 bg-[#FFD45A]" />
-              <div>
-                <h4 class="text-lg font-extrabold text-slate-900 sm:text-xl">User Experience (UX)</h4>
-                <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-                  Berfokus pada perancangan alur penggunaan yang intuitif melalui riset, struktur informasi, dan
-                  pemahaman kebutuhan pengguna.
-                </p>
-              </div>
+            <!-- LEFT -->
+            <div class="pt-2 lg:pt-0 flex flex-col justify-center">
+              <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                What I do?
+              </h3>
+
+              <p class="mt-5 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base">
+                Berfokus pada perancangan pengalaman pengguna dan tampilan antarmuka yang sederhana, jelas, dan mudah digunakan.
+              </p>
+
+              <p class="mt-4 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base">
+                Mengerjakan berbagai proyek desain digital, mulai dari website hingga dashboard, dengan perhatian pada detail,
+                konsistensi, dan kemudahan penggunaan.
+              </p>
             </div>
 
-            <div class="rounded-sm bg-white p-7 shadow-xl shadow-slate-200/60 ring-1 ring-slate-100">
-              <div>
-                <h4 class="text-lg font-extrabold text-slate-900 sm:text-xl">User Interface (UI)</h4>
+            <!-- RIGHT -->
+            <div class="space-y-6 group">
+
+              <!-- UX -->
+              <div
+                class="relative rounded-2xl bg-white py-7 pl-12 pr-7
+                      border border-[#E6E8EB]
+
+                      transition-all duration-300
+
+                      md:group-hover:opacity-40 md:group-hover:scale-[0.98]
+
+                      md:hover:!opacity-100 md:hover:!scale-100
+                      md:hover:bg-white md:hover:-translate-y-1
+                      md:hover:shadow-xl md:hover:shadow-slate-200/60
+
+                      md:hover:[box-shadow:inset_4px_0_0_0_#FFD45A,0_10px_25px_rgba(15,23,42,0.08)]"
+              >
+                <h4 class="text-lg font-extrabold text-slate-900 sm:text-xl">
+                  User Experience (UX)
+                </h4>
                 <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-                  Mendesain tampilan visual yang konsisten, sederhana, dan mudah dipahami untuk meningkatkan
-                  kenyamanan pengguna.
+                  Berfokus pada perancangan alur penggunaan yang intuitif melalui riset, struktur informasi,
+                  dan pemahaman kebutuhan pengguna.
                 </p>
               </div>
+
+              <!-- UI -->
+              <div
+                class="relative rounded-2xl bg-white py-7 pl-12 pr-7
+                      border border-[#E6E8EB]
+
+                      transition-all duration-300
+
+                      md:group-hover:opacity-40 md:group-hover:scale-[0.98]
+
+                      md:hover:!opacity-100 md:hover:!scale-100
+                      md:hover:bg-white md:hover:-translate-y-1
+                      md:hover:shadow-xl md:hover:shadow-slate-200/60
+
+                      md:hover:[box-shadow:inset_4px_0_0_0_#FFD45A,0_10px_25px_rgba(15,23,42,0.08)]"
+              >
+                <h4 class="text-lg font-extrabold text-slate-900 sm:text-xl">
+                  User Interface (UI)
+                </h4>
+                <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
+                  Mendesain tampilan visual yang konsisten, sederhana, dan mudah dipahami
+                  untuk meningkatkan kenyamanan pengguna.
+                </p>
+              </div>
+
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </ClientOnly>
 
     <!-- ✅ CLIENTS -->
     <ClientOnly>
       <section class="bg-white pt-20 sm:pt-24">
         <div class="mx-auto max-w-6xl px-6 pb-16 sm:pb-20">
-          <div class="text-center">
-            <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Clients</h3>
-          <p class="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base">
-            Client yang telah bekerja sama dalam berbagai proyek desain.
-          </p>
-        </div>
 
-        <div class="mt-12 flex flex-wrap items-center justify-center gap-x-16 gap-y-10">
-          <img
-            v-for="(client, index) in clientLogos"
-            :key="client.name"
-            class="h-24 w-auto object-contain opacity-95 sm:h-28"
-            :src="client.src"
-            :alt="client.name"
-            loading="lazy"
-            decoding="async"
-          />
+          <!-- TITLE -->
+          <div class="text-center">
+            <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+              Clients
+            </h3>
+            <p class="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base">
+              Client yang telah bekerja sama dalam berbagai proyek desain.
+            </p>
           </div>
+
+          <!-- MARQUEE WRAPPER -->
+          <div class="relative mt-12 overflow-hidden">
+
+            <!-- FADE KIRI -->
+            <div class="pointer-events-none absolute left-0 top-0 z-10 h-full w-10 sm:w-16 md:w-20 bg-gradient-to-r from-white to-transparent"></div>
+
+            <!-- FADE KANAN -->
+            <div class="pointer-events-none absolute right-0 top-0 z-10 h-full w-10 sm:w-16 md:w-20 bg-gradient-to-l from-white to-transparent"></div>
+
+            <!-- MARQUEE -->
+            <div class="flex w-max items-center gap-4 sm:gap-10 md:gap-16 animate-marquee">
+
+              <!-- LOOP 3x (NO GAP, SUPER SMOOTH) -->
+              <template v-for="n in 3">
+                <img
+                  v-for="(client, index) in clientLogos"
+                  :key="n + '-' + client.name"
+                  class="h-14 sm:h-16 md:h-20 lg:h-24 w-auto object-contain opacity-90 transition duration-300 hover:opacity-100 hover:scale-110"
+                  :src="client.src"
+                  :alt="client.name"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </template>
+
+            </div>
+          </div>
+
         </div>
       </section>
     </ClientOnly>
@@ -412,7 +628,7 @@ const portfolioItems: PortfolioItem[] = [
   {
     category: 'UI-UX DESIGN',
     title: 'Intel AI4FW SS',
-    description: 'Dashboard admin untuk monitoring data dan manajemen program secara terpusat.',
+    description: 'Dashboard admin untuk monitoring data dan pengelolaan program terpusat dalam satu sistem terintegrasi.',
     image: '/img/portfolio/intel-ai4fw-ss.webp',
     href: 'https://intel-digital-readiness-support.sustainablelivinglab.org/',
     buttonLabel: 'View',
@@ -508,5 +724,27 @@ onBeforeUnmount(() => {
 
 .animate-float {
   animation: float 4s ease-in-out infinite;
+}
+</style>
+
+
+<style>
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+  will-change: transform;
+}
+
+/* Pause saat hover (opsional, hapus kalau mau selalu jalan) */
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
 </style>
