@@ -276,15 +276,15 @@
             <!-- BUTTON -->
             <div class="absolute left-1/2 -bottom-5 -translate-x-1/2">
               <a
-                href="/cv/cv-imam-zamhari.pdf"
-                download="CV-Imam-Zamhari.pdf"
-                class="inline-flex items-center gap-6 rounded-md bg-[#FFD45A] px-6 py-3 text-sm font-semibold text-white shadow-lg transition md:hover:bg-[#FFC83A]"
-              >
-                <span class="material-symbols-outlined text-[18px] leading-none">
-                  download
-                </span>
-                Download CV
-              </a>
+  href="/cv/cv-imam-zamhari.pdf"
+  download="CV-Imam-Zamhari.pdf"
+  class="inline-flex items-center gap-4 rounded-md bg-[#FFD45A] px-6 py-3 text-sm max-[400px]:text-xs font-semibold text-white shadow-lg transition md:hover:bg-[#FFC83A] whitespace-nowrap"
+>
+  <span class="material-symbols-outlined text-[18px] leading-none">
+    download
+  </span>
+  Download CV
+</a>
             </div>
 
           </div>
