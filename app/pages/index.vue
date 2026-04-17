@@ -3,18 +3,19 @@
     
     <!-- HERO SECTION -->
     <section
-      class="relative min-h-screen w-full bg-[#FBFAF5] bg-no-repeat bg-center bg-contain md:bg-cover"
+      class="relative min-h-screen w-full bg-[#FBFAF5] 
+            bg-no-repeat bg-cover bg-[center_top] 
+            md:bg-cover md:bg-center"
       style="background-image: url('/img/hero/background-header.svg')"
     > 
 
-      <div class="absolute inset-0 flex items-center justify-center group -translate-y-14 md:-translate-y-20">
+      <div class="absolute inset-0 flex items-center justify-center group -translate-y-6 sm:-translate-y-10 md:-translate-y-20">
 
         <!-- TYPEWRITER -->
         <div class="flex justify-center">
           <div class="w-fit typewriter-wrapper">
 
-            <!-- TEXT -->
-            <div class="animate-typewriter py-12">
+            <div class="animate-typewriter py-10 sm:py-12">
 
               <h1
                 class="whitespace-nowrap leading-none tracking-tight flex items-end"
@@ -22,25 +23,34 @@
               >
 
                 <!-- Port -->
-                <span class="text-[76px] sm:text-[92px] md:text-[110px] lg:text-[200px] xl:text-[230px]">
+                <span
+                  class="relative 
+                        top-[-10px] sm:top-[0px] md:top-[-18px]
+                        text-[88px] sm:text-[100px] md:text-[140px] lg:text-[200px] xl:text-[230px]"
+                >
                   Port
                 </span>
 
                 <!-- f -->
                 <span
-                  class="inline-block font-bold relative -top-[35px]
-                        text-[85px] sm:text-[110px] md:text-[165px] lg:text-[210px] xl:text-[250px]"
+                  class="inline-block font-bold relative 
+                        -top-[24px] sm:-top-[28px] md:-top-[35px]
+                        text-[100px] sm:text-[120px] md:text-[200px] lg:text-[210px] xl:text-[250px]"
                   style="
                     font-family: 'Playball', cursive;
                     color:#FFC700;
-                    text-shadow: 0px 15px 5px rgba(43,56,76,0.52);
+                    text-shadow: 0px 14px 6px rgba(43,56,76,0.52);
                   "
                 >
                   f
                 </span>
 
                 <!-- olio -->
-                <span class="text-[76px] sm:text-[92px] md:text-[110px] lg:text-[200px] xl:text-[230px]">
+                <span
+                  class="relative 
+                        top-[-10px] sm:top-[0px] md:top-[-18px]
+                        text-[88px] sm:text-[100px] md:text-[140px] lg:text-[200px] xl:text-[230px]"
+                >
                   olio
                 </span>
 
@@ -58,8 +68,9 @@
         <img
           src="/img/hero/uiux-design-text.svg"
           class="absolute z-10
-                w-[40%] sm:w-[30%] md:w-[20%] lg:w-[15%]
-                top-[30%] left-[25%]
+                w-[25%] sm:w-[25%] md:w-[20%] lg:w-[15%]
+                top-[35%] sm:top-[32%] md:top-[27%]
+                left-[22%] sm:left-[23%] md:left-[25%]
                 animate-float-slow
                 transition-all duration-[800ms]
                 group-hover:translate-x-6"
@@ -69,8 +80,9 @@
         <img
           src="/img/hero/figma.svg"
           class="absolute z-10
-                w-[28%] sm:w-[20%] md:w-[14%] lg:w-[11%]
-                -bottom-[-10%] left-[6%]
+                w-[25%] sm:w-[20%] md:w-[14%] lg:w-[11%]
+                bottom-[8%] sm:bottom-[18%] md:bottom-[5%]
+                left-[-1%] sm:left-[7%] md:left-[6%]
                 rotate-[-12deg]
                 animate-float-slow
                 transition-all duration-[800ms]
@@ -84,7 +96,8 @@
           src="/img/hero/photoshop.svg"
           class="absolute z-10
                 w-[22%] sm:w-[16%] md:w-[12%] lg:w-[9%]
-                bottom-[8%] right-[6%]
+                bottom-[5%] sm:bottom-[11%] md:bottom-[8%]
+                right-[-2%] sm:right-[6%]
                 rotate-[8deg]
                 animate-float-slow
                 transition-all duration-[800ms]
@@ -93,38 +106,45 @@
                 group-hover:rotate-[12deg]"
         />
 
-        <!-- PEN -->
-        <img
-          src="/img/hero/Pen.svg"
+        <!-- 🔥 GROUP: PEN + BRUSH -->
+        <div
           class="absolute z-10
-                w-[18%] sm:w-[14%] md:w-[10%] lg:w-[7%]
-                top-[10%] left-[13%]
-                rotate-[-10deg]
+                top-[10%] sm:top-[8%] md:top-[5%]
+                left-[-20%] sm:left-[-32%] md:left-[-30%]
+                w-[40%] sm:w-[45%] md:w-[43%] lg:w-[40%]
                 animate-float-slow
                 transition-all duration-[800ms]
-                group-hover:translate-y-16
-                group-hover:rotate-[-16deg]"
-        />
+                group-hover:translate-y-4"
+        >
 
-        <!-- BRUSH -->
-        <img
-          src="/img/hero/Brush.svg"
-          class="absolute z-10
-                w-[54%] sm:w-[58%] md:w-[43%] lg:w-[40%]
-                top-[-5%] left-[-28%]
-                rotate-[12deg]
-                animate-float-slow
-                transition-all duration-[800ms]
-                group-hover:translate-y-4
-                group-hover:rotate-[18deg]"
-        />
+          <!-- BRUSH -->
+          <img
+            src="/img/hero/Brush.svg"
+            class="w-full rotate-[12deg]"
+          />
+
+          <!-- PEN -->
+          <img
+            src="/img/hero/Pen.svg"
+            class="absolute
+                  w-[25%]
+                  top-[5%]
+                  left-[105%] sm:left-[100%] md:left-[105%]
+                  rotate-[-10deg]
+                  transition-all duration-[800ms]
+                  group-hover:translate-y-10
+                  group-hover:rotate-[-14deg]"
+          />
+
+        </div>
 
         <!-- ILLUSTRATOR -->
         <img
           src="/img/hero/illustrator.svg"
           class="absolute z-10
-                w-[12%] sm:w-[10%] md:w-[11%] lg:w-[6%]
-                bottom-[75%] right-[35%]
+                w-[15%] sm:w-[10%] md:w-[11%] lg:w-[6%]
+                top-[10%] sm:top-[15%] md:top-[15%]
+                right-[30%] sm:right-[32%] md:right-[35%]
                 rotate-[6deg]
                 animate-float-slow
                 transition-all duration-[800ms]
@@ -137,14 +157,15 @@
         <img
           src="/img/hero/canva.svg"
           class="absolute z-10
-                w-[10%] sm:w-[15%] md:w-[11%] lg:w-[8%]
-                top-[30%] right-[10%]
-                rotate-[-15deg]
+                w-[15%] sm:w-[12%] md:w-[11%] lg:w-[8%]
+                top-[25%] sm:top-[29%] md:top-[30%]
+                right-[6%] sm:right-[8%] md:right-[10%]
+                rotate-[35deg]
                 animate-float-slow
                 transition-all duration-[800ms]
                 group-hover:translate-x-4
                 group-hover:scale-105
-                group-hover:rotate-[-4deg]"
+                group-hover:rotate-[18deg]"
         />
 
       </div>
@@ -152,7 +173,7 @@
 
     <!-- ABOUT SECTION -->
     <section class="bg-slate-100/70">
-      <div class="mx-auto max-w-[1200px] px-6 sm:px-10 lg:px-12 pb-20 sm:pb-24 -mt-40 sm:-mt-44 md:-mt-52 lg:-mt-60">
+      <div class="mx-auto max-w-[1200px] px-6 sm:px-10 lg:px-12 pb-12 sm:pb-20 -mt-20 sm:-mt-32 md:-mt-52 lg:-mt-60">
         
         <ClientOnly>
           <div
@@ -830,13 +851,13 @@ onBeforeUnmount(() => {
 
 
 <style>
-/* WRAPPER */
+/* ================= WRAPPER ================= */
 .typewriter-wrapper {
   position: relative;
   display: inline-block;
 }
 
-/* TYPEWRITER */
+/* ================= TYPEWRITER ================= */
 @keyframes typing {
   0% { max-width: 0 }
   50% { max-width: 100% }
@@ -852,7 +873,7 @@ onBeforeUnmount(() => {
   animation: typing 4s steps(25, end) infinite;
 }
 
-/* CURSOR MOVE */
+/* ================= CURSOR MOVE ================= */
 @keyframes cursorMove {
   0% { left: 0% }
   50% { left: 100% }
@@ -860,24 +881,55 @@ onBeforeUnmount(() => {
   100% { left: 0% }
 }
 
-/* BLINK */
+/* ================= CURSOR BLINK ================= */
 @keyframes blink {
   0%, 100% { opacity: 0 }
   50% { opacity: 1 }
 }
 
-/* CURSOR */
+/* ================= CURSOR ================= */
 .cursor-bar {
   position: absolute;
+
+  /* posisi default */
   top: 50%;
   transform: translateY(-50%);
 
+  /* ukuran default */
   width: 3px;
-  height: 10.5em;
+  height: 9.5em;
+
   background: #2B384C;
 
-  animation: 
+  animation:
     cursorMove 4s steps(25, end) infinite,
     blink 1s ease-in-out infinite;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 640px) {
+  .cursor-bar {
+    top: 50%;
+    height: 6em;
+    width: 2px;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .cursor-bar {
+    top: 52%;
+    height: 8em;
+    width: 2.5px;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1024px) {
+  .cursor-bar {
+    top: 50%;
+    height: 9.5em;
+    width: 3px;
+  }
 }
 </style>
