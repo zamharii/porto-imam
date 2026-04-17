@@ -278,7 +278,7 @@
               <a
                 href="/cv/cv-imam-zamhari.pdf"
                 download="CV-Imam-Zamhari.pdf"
-                class="inline-flex items-center gap-2 rounded-md bg-[#FFD45A] px-6 py-3 text-sm font-semibold text-white shadow-lg transition md:hover:bg-[#FFC83A]"
+                class="inline-flex items-center gap-6 rounded-md bg-[#FFD45A] px-6 py-3 text-sm font-semibold text-white shadow-lg transition md:hover:bg-[#FFC83A]"
               >
                 <span class="material-symbols-outlined text-[18px] leading-none">
                   download
