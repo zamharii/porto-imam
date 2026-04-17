@@ -6,26 +6,145 @@
       class="relative min-h-screen w-full bg-[#FBFAF5] bg-no-repeat bg-center bg-contain md:bg-cover"
       style="background-image: url('/img/hero/background-header.svg')"
     > 
+
       <div class="absolute inset-0 flex items-center justify-center group -translate-y-14 md:-translate-y-20">
 
-        <!-- TEXT PORTOFOLIO -->
-        <img
-          src="/img/hero/text-portofolio.svg"
-          alt="Portfolio Text"
-          class="w-[120%] sm:w-[110%] md:w-[95%] lg:w-[80%] xl:w-[70%]"
-        />
+        <!-- TYPEWRITER -->
+        <div class="flex justify-center">
+          <div class="w-fit typewriter-wrapper">
 
-        <!-- UIUX FLOATING -->
+            <!-- TEXT -->
+            <div class="animate-typewriter py-12">
+
+              <h1
+                class="whitespace-nowrap leading-none tracking-tight flex items-end"
+                style="font-family: 'Philosopher', serif; color:#2B384C;"
+              >
+
+                <!-- Port -->
+                <span class="text-[76px] sm:text-[92px] md:text-[110px] lg:text-[200px] xl:text-[230px]">
+                  Port
+                </span>
+
+                <!-- f -->
+                <span
+                  class="inline-block font-bold relative -top-[35px]
+                        text-[85px] sm:text-[110px] md:text-[165px] lg:text-[210px] xl:text-[250px]"
+                  style="
+                    font-family: 'Playball', cursive;
+                    color:#FFC700;
+                    text-shadow: 0px 15px 5px rgba(43,56,76,0.52);
+                  "
+                >
+                  f
+                </span>
+
+                <!-- olio -->
+                <span class="text-[76px] sm:text-[92px] md:text-[110px] lg:text-[200px] xl:text-[230px]">
+                  olio
+                </span>
+
+              </h1>
+
+            </div>
+
+            <!-- CURSOR -->
+            <span class="cursor-bar"></span>
+
+          </div>
+        </div>
+
+        <!-- UIUX -->
         <img
           src="/img/hero/uiux-design-text.svg"
-          alt="UIUX Design"
           class="absolute z-10
-                w-[45%] sm:w-[35%] md:w-[25%] lg:w-[20%]
-                top-[18%] left-[18%]
+                w-[40%] sm:w-[30%] md:w-[20%] lg:w-[15%]
+                top-[30%] left-[25%]
                 animate-float-slow
                 transition-all duration-[800ms]
                 group-hover:translate-x-6"
-          style="transition-timing-function: cubic-bezier(0, 0, 0.08, 1.34);"
+        />
+
+        <!-- FIGMA -->
+        <img
+          src="/img/hero/figma.svg"
+          class="absolute z-10
+                w-[28%] sm:w-[20%] md:w-[14%] lg:w-[11%]
+                -bottom-[-10%] left-[6%]
+                rotate-[-12deg]
+                animate-float-slow
+                transition-all duration-[800ms]
+                group-hover:-translate-y-6
+                group-hover:scale-110
+                group-hover:rotate-[-18deg]"
+        />
+
+        <!-- PHOTOSHOP -->
+        <img
+          src="/img/hero/photoshop.svg"
+          class="absolute z-10
+                w-[22%] sm:w-[16%] md:w-[12%] lg:w-[9%]
+                bottom-[8%] right-[6%]
+                rotate-[8deg]
+                animate-float-slow
+                transition-all duration-[800ms]
+                group-hover:-translate-y-6
+                group-hover:scale-110
+                group-hover:rotate-[12deg]"
+        />
+
+        <!-- PEN -->
+        <img
+          src="/img/hero/Pen.svg"
+          class="absolute z-10
+                w-[18%] sm:w-[14%] md:w-[10%] lg:w-[7%]
+                top-[10%] left-[13%]
+                rotate-[-10deg]
+                animate-float-slow
+                transition-all duration-[800ms]
+                group-hover:translate-y-16
+                group-hover:rotate-[-16deg]"
+        />
+
+        <!-- BRUSH -->
+        <img
+          src="/img/hero/Brush.svg"
+          class="absolute z-10
+                w-[54%] sm:w-[58%] md:w-[43%] lg:w-[40%]
+                top-[-5%] left-[-28%]
+                rotate-[12deg]
+                animate-float-slow
+                transition-all duration-[800ms]
+                group-hover:translate-y-4
+                group-hover:rotate-[18deg]"
+        />
+
+        <!-- ILLUSTRATOR -->
+        <img
+          src="/img/hero/illustrator.svg"
+          class="absolute z-10
+                w-[12%] sm:w-[10%] md:w-[11%] lg:w-[6%]
+                bottom-[75%] right-[35%]
+                rotate-[6deg]
+                animate-float-slow
+                transition-all duration-[800ms]
+                group-hover:-translate-y-5
+                group-hover:scale-110
+                group-hover:rotate-[-10deg]"
+        />
+
+        <!-- CANVA -->
+        <img
+          src="/img/hero/canva.svg"
+          class="absolute z-10
+                w-[10%] sm:w-[15%] md:w-[11%] lg:w-[8%]
+                top-[30%] right-[10%]
+                rotate-[-15deg]
+                animate-float-slow
+                transition-all duration-[800ms]
+                group-hover:translate-x-4
+                group-hover:scale-105
+                group-hover:rotate-[-4deg]"
         />
 
       </div>
@@ -33,7 +152,7 @@
 
     <!-- ABOUT SECTION -->
     <section class="bg-slate-100/70">
-      <div class="mx-auto max-w-[1200px] px-6 sm:px-10 lg:px-12 pb-32 -mt-40 sm:-mt-44 md:-mt-52 lg:-mt-60">
+      <div class="mx-auto max-w-[1200px] px-6 sm:px-10 lg:px-12 pb-20 sm:pb-24 -mt-40 sm:-mt-44 md:-mt-52 lg:-mt-60">
         
         <ClientOnly>
           <div
@@ -121,7 +240,7 @@
                 </div>
 
                 <div class="flex-1 bg-[#FCF7E9] px-5 py-5 text-center border-l border-white">
-                  <div class="text-lg sm:text-xl font-extrabold text-slate-900">8%</div>
+                  <div class="text-lg sm:text-xl font-extrabold text-slate-900">8+</div>
                   <div class="text-xs text-slate-500 mt-1">Project</div>
                 </div>
 
@@ -134,7 +253,7 @@
             </div>
 
             <!-- BUTTON -->
-            <div class="absolute left-1/2 -bottom-6 -translate-x-1/2">
+            <div class="absolute left-1/2 -bottom-5 -translate-x-1/2">
               <a
                 href="/cv/cv-imam-zamhari.pdf"
                 download="CV-Imam-Zamhari.pdf"
@@ -153,13 +272,13 @@
       </div>
     </section>
 
-    <!-- ✅ WORK PROCESS -->
+    <!-- WORK PROCESS -->
     <ClientOnly>
-      <section class="relative z-10 bg-slate-100/70 py-20 sm:py-24">
+      <section class="relative z-10 bg-slate-100/70 pt-10 sm:pt-5 pb-20 sm:pb-24">
         <div class="mx-auto max-w-6xl px-6">
           <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
 
-            <!-- LEFT CONTENT (CENTERED) -->
+            <!-- LEFT -->
             <div class="pt-2 lg:pt-0 flex flex-col justify-center">
               <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
                 Work Process
@@ -176,79 +295,39 @@
               </p>
             </div>
 
-            <!-- RIGHT CARDS -->
+            <!-- RIGHT -->
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:grid-rows-2 sm:grid-flow-col group">
 
-              <!-- CARD 1 -->
-              <div
-                class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100
-                      transition-all duration-300
-
-                      md:group-hover:opacity-40 md:group-hover:scale-[0.98]
-                      md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl"
-              >
+              <div class="rounded-2xl bg-white p-6 ring-1 ring-slate-100 transition-all duration-300 md:group-hover:opacity-40 md:group-hover:scale-[0.98] md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl">
                 <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A]">
-                  <span class="material-symbols-outlined text-[22px] leading-none">calendar_month</span>
+                  <span class="material-symbols-outlined text-[22px]">calendar_month</span>
                 </div>
-
-                <h4 class="mt-5 text-base font-extrabold text-slate-900">1. Research</h4>
-                <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                  Mengumpulkan kebutuhan pengguna dan tujuan produk secara terstruktur.
-                </p>
+                <h4 class="mt-5 font-extrabold text-slate-900">1. Research</h4>
+                <p class="mt-2 text-sm text-slate-600">Mengumpulkan kebutuhan pengguna dan tujuan produk secara terstruktur.</p>
               </div>
 
-              <!-- CARD 2 -->
-              <div
-                class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100
-                      transition-all duration-300
-
-                      md:group-hover:opacity-40 md:group-hover:scale-[0.98]
-                      md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl"
-              >
+              <div class="rounded-2xl bg-white p-6 ring-1 ring-slate-100 transition-all duration-300 md:group-hover:opacity-40 md:group-hover:scale-[0.98] md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl">
                 <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A]">
-                  <span class="material-symbols-outlined text-[22px] leading-none">brush</span>
+                  <span class="material-symbols-outlined text-[22px]">brush</span>
                 </div>
-
-                <h4 class="mt-5 text-base font-extrabold text-slate-900">2. Design</h4>
-                <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                  Menyusun wireframe dan desain visual yang sederhana dan konsisten.
-                </p>
+                <h4 class="mt-5 font-extrabold text-slate-900">2. Design</h4>
+                <p class="mt-2 text-sm text-slate-600">Menyusun wireframe dan desain visual yang sederhana dan konsisten.</p>
               </div>
 
-              <!-- CARD 3 -->
-              <div
-                class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100
-                      transition-all duration-300
-
-                      md:group-hover:opacity-40 md:group-hover:scale-[0.98]
-                      md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl"
-              >
+              <div class="rounded-2xl bg-white p-6 ring-1 ring-slate-100 transition-all duration-300 md:group-hover:opacity-40 md:group-hover:scale-[0.98] md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl">
                 <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A]">
-                  <span class="material-symbols-outlined text-[22px] leading-none">monitoring</span>
+                  <span class="material-symbols-outlined text-[22px]">monitoring</span>
                 </div>
-
-                <h4 class="mt-5 text-base font-extrabold text-slate-900">3. Analyze</h4>
-                <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                  Mengevaluasi desain melalui feedback dan pengujian secara berkala.
-                </p>
+                <h4 class="mt-5 font-extrabold text-slate-900">3. Analyze</h4>
+                <p class="mt-2 text-sm text-slate-600">Mengevaluasi desain melalui feedback dan pengujian secara berkala.</p>
               </div>
 
-              <!-- CARD 4 -->
-              <div
-                class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100
-                      transition-all duration-300
-
-                      md:group-hover:opacity-40 md:group-hover:scale-[0.98]
-                      md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl"
-              >
+              <div class="rounded-2xl bg-white p-6 ring-1 ring-slate-100 transition-all duration-300 md:group-hover:opacity-40 md:group-hover:scale-[0.98] md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl">
                 <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A]">
-                  <span class="material-symbols-outlined text-[22px] leading-none">rocket_launch</span>
+                  <span class="material-symbols-outlined text-[22px]">rocket_launch</span>
                 </div>
-
-                <h4 class="mt-5 text-base font-extrabold text-slate-900">4. Launch</h4>
-                <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                  Menyiapkan desain untuk pengembangan dan implementasi yang sesuai.
-                </p>
+                <h4 class="mt-5 font-extrabold text-slate-900">4. Launch</h4>
+                <p class="mt-2 text-sm text-slate-600">Menyiapkan desain untuk pengembangan dan implementasi.</p>
               </div>
 
             </div>
@@ -746,5 +825,59 @@ onBeforeUnmount(() => {
 /* Pause saat hover (opsional, hapus kalau mau selalu jalan) */
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+</style>
+
+
+<style>
+/* WRAPPER */
+.typewriter-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* TYPEWRITER */
+@keyframes typing {
+  0% { max-width: 0 }
+  50% { max-width: 100% }
+  70% { max-width: 100% }
+  100% { max-width: 0 }
+}
+
+.animate-typewriter {
+  display: inline-block;
+  max-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(25, end) infinite;
+}
+
+/* CURSOR MOVE */
+@keyframes cursorMove {
+  0% { left: 0% }
+  50% { left: 100% }
+  70% { left: 100% }
+  100% { left: 0% }
+}
+
+/* BLINK */
+@keyframes blink {
+  0%, 100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+/* CURSOR */
+.cursor-bar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 3px;
+  height: 10.5em;
+  background: #2B384C;
+
+  animation: 
+    cursorMove 4s steps(25, end) infinite,
+    blink 1s ease-in-out infinite;
 }
 </style>
