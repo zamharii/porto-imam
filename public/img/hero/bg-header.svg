@@ -1,0 +1,73 @@
+<svg width="1920" height="1801" viewBox="0 0 1920 1801" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_2048_3287" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="1801">
+<g opacity="0.7" clip-path="url(#clip0_2048_3287)">
+<g clip-path="url(#clip1_2048_3287)">
+<line y1="9.5" x2="1920" y2="9.5" stroke="#E6E8EB"/>
+<line y1="101.2" x2="1920" y2="101.2" stroke="#E6E8EB"/>
+<line y1="192.9" x2="1920" y2="192.9" stroke="#E6E8EB"/>
+<line y1="284.6" x2="1920" y2="284.6" stroke="#E6E8EB"/>
+<line y1="376.3" x2="1920" y2="376.3" stroke="#E6E8EB"/>
+<line y1="468" x2="1920" y2="468" stroke="#E6E8EB"/>
+<line y1="559.7" x2="1920" y2="559.7" stroke="#E6E8EB"/>
+<line y1="651.4" x2="1920" y2="651.4" stroke="#E6E8EB"/>
+<line y1="743.1" x2="1920" y2="743.1" stroke="#E6E8EB"/>
+<line y1="834.8" x2="1920" y2="834.8" stroke="#E6E8EB"/>
+<line y1="926.5" x2="1920" y2="926.5" stroke="#E6E8EB"/>
+<line y1="1018.2" x2="1920" y2="1018.2" stroke="#E6E8EB"/>
+<line y1="1109.9" x2="1920" y2="1109.9" stroke="#E6E8EB"/>
+<line y1="1201.6" x2="1920" y2="1201.6" stroke="#E6E8EB"/>
+<line y1="1293.3" x2="1920" y2="1293.3" stroke="#E6E8EB"/>
+</g>
+<g clip-path="url(#clip2_2048_3287)">
+<line x1="9.5" y1="1298" x2="9.5" stroke="#E6E8EB"/>
+<line x1="101.2" y1="1298" x2="101.2" stroke="#E6E8EB"/>
+<line x1="192.9" y1="1298" x2="192.9" stroke="#E6E8EB"/>
+<line x1="284.6" y1="1298" x2="284.6" stroke="#E6E8EB"/>
+<line x1="376.3" y1="1298" x2="376.3" stroke="#E6E8EB"/>
+<line x1="468" y1="1298" x2="468" stroke="#E6E8EB"/>
+<line x1="559.7" y1="1298" x2="559.7" stroke="#E6E8EB"/>
+<line x1="651.4" y1="1298" x2="651.4" stroke="#E6E8EB"/>
+<line x1="743.1" y1="1298" x2="743.1" stroke="#E6E8EB"/>
+<line x1="834.8" y1="1298" x2="834.8" stroke="#E6E8EB"/>
+<line x1="926.5" y1="1298" x2="926.5" stroke="#E6E8EB"/>
+<line x1="1018.2" y1="1298" x2="1018.2" stroke="#E6E8EB"/>
+<line x1="1109.9" y1="1298" x2="1109.9" stroke="#E6E8EB"/>
+<line x1="1201.6" y1="1298" x2="1201.6" stroke="#E6E8EB"/>
+<line x1="1293.3" y1="1298" x2="1293.3" stroke="#E6E8EB"/>
+<line x1="1385" y1="1298" x2="1385" stroke="#E6E8EB"/>
+<line x1="1476.7" y1="1298" x2="1476.7" stroke="#E6E8EB"/>
+<line x1="1568.4" y1="1298" x2="1568.4" stroke="#E6E8EB"/>
+<line x1="1660.1" y1="1298" x2="1660.1" stroke="#E6E8EB"/>
+<line x1="1751.8" y1="1298" x2="1751.8" stroke="#E6E8EB"/>
+<line x1="1843.5" y1="1298" x2="1843.5" stroke="#E6E8EB"/>
+</g>
+</g>
+</mask>
+<g mask="url(#mask0_2048_3287)">
+<g filter="url(#filter0_if_2048_3287)">
+<path d="M-754.613 -363.981C-754.613 19.7919 -574.02 387.847 -252.561 659.216C68.8976 930.584 504.889 1083.04 959.5 1083.04C1414.11 1083.04 1850.1 930.584 2171.56 659.216C2493.02 387.847 2673.61 19.7924 2673.61 -363.981L959.501 -363.981L-754.613 -363.981Z" fill="#D9D9D9" fill-opacity="0.5" style="mix-blend-mode:multiply"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_if_2048_3287" x="-766.713" y="-376.081" width="3452.43" height="1554.12" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="95"/>
+<feGaussianBlur stdDeviation="125"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_2048_3287"/>
+<feGaussianBlur stdDeviation="6.05" result="effect2_foregroundBlur_2048_3287"/>
+</filter>
+<clipPath id="clip0_2048_3287">
+<rect width="1920" height="1801" fill="white"/>
+</clipPath>
+<clipPath id="clip1_2048_3287">
+<rect width="1920" height="1298" fill="white"/>
+</clipPath>
+<clipPath id="clip2_2048_3287">
+<rect width="1298" height="1920" fill="white" transform="matrix(0 -1 1 0 0 1298)"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,12 +1,123 @@
 <template>
   <main class="min-h-screen bg-[#FBFAF5]">
+
+    <!-- NAVBAR -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-[#D1D5DB] bg-white/60 backdrop-blur-xl"
+    >
+      <nav class="mx-auto flex h-[100px] max-w-7xl items-center justify-between px-6 sm:px-10 lg:px-16">
+        
+        <!-- NAME -->
+        <NuxtLink
+          to="/"
+          class="text-[24px] font-reguler leading-none text-[#BC0003]"
+          style="font-family: 'Geist Mono', monospace;"
+        >
+          Zamhari
+        </NuxtLink>
+
+        <!-- DESKTOP MENU -->
+        <div
+          class="hidden items-center gap-10 text-[16px] font-reguler text-[#2B384C] md:flex"
+          style="font-family: 'Geist Mono', monospace;"
+        >
+          <a href="#about" class="transition hover:text-[#FF2D20]">About</a>
+          <a href="#works" class="transition hover:text-[#FF2D20]">Works</a>
+          <a href="#what-i-do" class="transition hover:text-[#FF2D20]">What I Do</a>
+          <a href="#contact" class="transition hover:text-[#FF2D20]">Contact</a>
+        </div>
+
+        <!-- DESKTOP ACTION -->
+        <div class="hidden items-center gap-5 md:flex">
+          <!-- LINKEDIN -->
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="flex h-9 w-9 items-center justify-center rounded-md border border-[#465366] text-[15px] font-reguler text-[#465366] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]"
+            style="font-family: 'Geist Mono', monospace;"
+          >
+            in
+          </a>
+
+          <!-- RESUME -->
+          <a
+            href="/cv/cv-imam-zamhari.pdf"
+            download="CV-Imam-Zamhari.pdf"
+            class="inline-flex items-center gap-3 rounded-full bg-[#FF2D20] px-6 py-3 text-[16px] font-reguler text-white transition hover:bg-[#FF6258]"
+            style="font-family: 'Inter', sans-serif;"
+          >
+            <span class="material-symbols-outlined text-[18px] leading-none">
+              download
+            </span>
+            My Resume
+          </a>
+        </div>
+
+        <!-- MOBILE BUTTON -->
+        <button
+          class="flex h-10 w-10 items-center justify-center rounded-lg border border-[#D1D5DB] text-[#2B384C] md:hidden"
+          type="button"
+          @click="isMobileMenuOpen = !isMobileMenuOpen"
+        >
+          <span class="material-symbols-outlined">
+            {{ isMobileMenuOpen ? 'close' : 'menu' }}
+          </span>
+        </button>
+      </nav>
+
+      <!-- MOBILE MENU -->
+      <div
+        v-if="isMobileMenuOpen"
+        class="absolute left-0 top-full z-50 w-full border-t border-[#D1D5DB] bg-white px-6 py-8 md:hidden"
+      >
+        <!-- LINKS -->
+        <div
+          class="space-y-5 border-b border-[#D1D5DB] pb-7 text-[16px] font-medium text-[#2B384C]"
+          style="font-family: 'Geist Mono', monospace;"
+        >
+          <a href="#about" class="block transition hover:text-[#FF2D20]" @click="isMobileMenuOpen = false">About</a>
+          <a href="#works" class="block transition hover:text-[#FF2D20]" @click="isMobileMenuOpen = false">Works</a>
+          <a href="#what-i-do" class="block transition hover:text-[#FF2D20]" @click="isMobileMenuOpen = false">What I Do</a>
+          <a href="#contact" class="block transition hover:text-[#FF2D20]" @click="isMobileMenuOpen = false">Contact</a>
+        </div>
+
+        <!-- ACTION -->
+        <div class="mt-7 space-y-6">
+          
+          <!-- LINKEDIN -->
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#465366] text-[15px] font-medium text-[#465366] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]"
+            style="font-family: 'Geist Mono', monospace;"
+          >
+            in
+          </a>
+
+          <!-- RESUME -->
+          <a
+            href="/cv/cv-imam-zamhari.pdf"
+            download="CV-Imam-Zamhari.pdf"
+            class="flex w-full items-center justify-center gap-3 rounded-md bg-[#FF2D20] px-6 py-4 text-[16px] text-white transition hover:bg-[#FF6258]"
+            style="font-family: 'Inter', sans-serif;"
+          >
+            <span class="material-symbols-outlined text-[18px]">download</span>
+            My Resume
+          </a>
+
+        </div>
+      </div>
+    </header>
     
     <!-- HERO SECTION -->
     <section
       class="relative min-h-screen w-full bg-[#FBFAF5] 
             bg-no-repeat bg-cover bg-[center_top] 
             md:bg-cover md:bg-center"
-      style="background-image: url('/img/hero/background-header.svg')"
+      style="background-image: url('/img/hero/bg-header.svg')"
     > 
 
       <div class="absolute inset-0 flex items-center justify-center group -translate-y-6 sm:-translate-y-10 md:-translate-y-20">
@@ -38,7 +149,7 @@
                         text-[100px] sm:text-[120px] md:text-[200px] lg:text-[210px] xl:text-[250px]"
                   style="
                     font-family: 'Playball', cursive;
-                    color:#FFC700;
+                    color:#FF2D20;
                     text-shadow: 0px 14px 6px rgba(43,56,76,0.52);
                   "
                 >
@@ -172,124 +283,122 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section class="bg-slate-100/70">
-      <div class="mx-auto max-w-[1200px] px-6 sm:px-10 lg:px-12 pb-12 sm:pb-20 -mt-20 sm:-mt-32 md:-mt-52 lg:-mt-60">
-        
-        <ClientOnly>
-          <div
-            class="relative z-30 rounded-3xl bg-white/90 backdrop-blur p-6 sm:p-10 lg:p-12 shadow-2xl shadow-slate-200/60 ring-1 ring-slate-200/60"
-          >
+    <section id="about" class="relative -mt-24 bg-white py-20 sm:-mt-32 sm:py-24 lg:-mt-40 lg:py-28">
+      <div class="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
+        <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
+          
+          <!-- LEFT CONTENT -->
+          <div>
+            <!-- BADGE -->
+            <div
+              class="inline-flex rounded-full bg-[#FFEBEB] px-4 py-2 text-[12px] font-medium text-[#BC0003]"
+              style="font-family: 'Geist Mono', monospace;"
+            >
+              UI/UX Design
+            </div>
 
-            <!-- GRID -->
-            <div class="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.2fr] items-center">
+            <!-- TITLE -->
+            <h2
+              class="mt-8 text-[52px] font-medium leading-none text-[#2B384C] sm:text-[64px] lg:text-[76px]"
+              style="font-family: 'Philosopher', serif;"
+            >
+              My Portfolio
+            </h2>
 
-              <!-- IMAGE -->
-              <div class="flex justify-center lg:justify-start -mt-6 lg:-mt-8">
-                <div class="w-full max-w-[320px] sm:max-w-sm lg:max-w-md">
+            <!-- MOBILE IMAGE -->
+            <div class="mt-10 flex justify-center lg:hidden">
+              <div class="group relative w-full max-w-[340px] overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white p-6">
+                <div class="absolute left-1/2 top-10 h-[2px] w-40 -translate-x-1/2 bg-[#E5E7EB]"></div>
+
+                <div class="relative mx-auto mt-8 overflow-hidden rounded-2xl bg-[#FF2D20]">
                   <img
-                    class="h-auto w-full object-contain"
                     src="/img/about/Asli Hover.png"
-                    alt="About picture"
+                    alt="Imam Zamhari"
+                    class="relative z-10 h-auto w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
                     loading="lazy"
                     decoding="async"
                   />
                 </div>
               </div>
+            </div>
 
-              <!-- TEXT -->
-              <div>
+            <!-- DESCRIPTION -->
+            <div
+              class="mt-8 max-w-2xl space-y-6 text-[16px] leading-[2] text-[#2B384C] sm:text-[18px]"
+            >
+              <p>
+                Hai, saya <span class="font-semibold text-[#FF2D20]">Imam Zamhari</span>,
+                seorang Desainer UI/UX yang berbasis di Indonesia. Saya senang mengeksplorasi ide
+                dan mengubahnya menjadi pengalaman digital yang intuitif dan ramah pengguna.
+              </p>
 
-                <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                  About Me
-                </h2>
-
-                <p class="mt-5 text-sm leading-relaxed text-slate-600 sm:text-base">
-                  Hai, saya Imam Zamhari, seorang Desainer Produk / Desainer UI/UX yang berbasis di Indonesia.
-                  Saya senang mengeksplorasi ide dan mengubahnya menjadi pengalaman digital yang intuitif dan ramah pengguna.
-                </p>
-
-                <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
-                  Saya bersemangat tentang desain yang berpusat pada pengguna dan selalu ingin belajar, berkembang,
-                  dan berkolaborasi di industri kreatif.
-                </p>
-
-                <!-- WORK EXPERIENCE -->
-                <div class="mt-8">
-                  <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">
-                    Work experience
-                  </h3>
-
-                  <div class="mt-5 space-y-6">
-
-                    <div>
-                      <div class="font-semibold text-slate-900">
-                        PT. Sustainable Living Lab
-                      </div>
-                      <div class="text-xs text-slate-400">
-                        May 2024 - April 2026 • UI UX Design
-                      </div>
-                      <p class="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
-                        Bandung Institute of Technology (ITB) Science and Techno Park (STP) Building, 3rd Floor
-                      </p>
-                    </div>
-
-                    <div>
-                      <div class="font-semibold text-slate-900">
-                        PT. Satria Nusa Enjinering
-                      </div>
-                      <div class="text-xs text-slate-400">
-                        Dec 2023 - May 2024 • UI UX Design
-                      </div>
-                      <p class="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
-                        Jl. R.A Kartini II, No. 11 Madras Hulu Medan, Sumatera Utara 20152
-                      </p>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
+              <p>
+                Saya bersemangat tentang desain yang berpusat pada pengguna dan selalu ingin belajar,
+                berkembang, dan berkolaborasi di industri kreatif.
+              </p>
             </div>
 
             <!-- STATS -->
-            <div class="mt-8 flex justify-center">
-              <div class="w-full max-w-md flex overflow-hidden rounded-xl border border-white">
+            <div class="mt-10 grid max-w-xl grid-cols-3 overflow-hidden bg-[#FFF5F5]">
+              <div class="border-l-4 border-[#BC0003] px-4 py-6 text-center sm:px-6">
+                <div class="text-[20px] font-medium text-[#2B384C] sm:text-[22px]">4+ Y.</div>
+                <div class="mt-2 text-[12px] text-[#6B7280] sm:text-[13px]">Experience</div>
+              </div>
 
-                <div class="flex-1 bg-[#FCF7E9] px-5 py-5 text-center border-l-4 border-[#FFD45A]">
-                  <div class="text-lg sm:text-xl font-extrabold text-slate-900">4+ Y.</div>
-                  <div class="text-xs text-slate-500 mt-1">Experience</div>
-                </div>
+              <div class="border-l border-white px-4 py-6 text-center sm:px-6">
+                <div class="text-[20px] font-medium text-[#2B384C] sm:text-[22px]">15+</div>
+                <div class="mt-2 text-[12px] text-[#6B7280] sm:text-[13px]">Project</div>
+              </div>
 
-                <div class="flex-1 bg-[#FCF7E9] px-5 py-5 text-center border-l border-white">
-                  <div class="text-lg sm:text-xl font-extrabold text-slate-900">8+</div>
-                  <div class="text-xs text-slate-500 mt-1">Project</div>
-                </div>
-
-                <div class="flex-1 bg-[#FCF7E9] px-5 py-5 text-center border-l border-white">
-                  <div class="text-lg sm:text-xl font-extrabold text-slate-900">3+</div>
-                  <div class="text-xs text-slate-500 mt-1">Client</div>
-                </div>
-
+              <div class="border-l border-white px-4 py-6 text-center sm:px-6">
+                <div class="text-[20px] font-medium text-[#2B384C] sm:text-[22px]">10+</div>
+                <div class="mt-2 text-[12px] text-[#6B7280] sm:text-[13px]">Client</div>
               </div>
             </div>
 
-            <!-- BUTTON -->
-            <div class="absolute left-1/2 -bottom-5 -translate-x-1/2">
+            <!-- BUTTONS -->
+            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
-                href="/cv/cv-imam-zamhari.pdf"
-                download="CV-Imam-Zamhari.pdf"
-                class="inline-flex items-center gap-6 rounded-md bg-[#FFD45A] px-6 py-3 text-sm font-semibold text-white shadow-lg transition md:hover:bg-[#FFC83A]"
+                href="mailto:zamhariimam0@gmail.com"
+                class="inline-flex items-center justify-center gap-2 rounded-md bg-[#FF2D20] px-8 py-4 text-[16px] font-normal text-white transition hover:bg-[#FF6258]"
+                style="font-family: 'Inter', sans-serif;"
               >
+                Get in Touch
                 <span class="material-symbols-outlined text-[18px] leading-none">
-                  download
+                  arrow_forward
                 </span>
-                Download CV
+              </a>
+
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center rounded-md border border-[#D1D5DB] px-8 py-4 text-[16px] font-normal text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]"
+                style="font-family: 'Inter', sans-serif;"
+              >
+                LinkedIn
               </a>
             </div>
-
           </div>
-        </ClientOnly>
 
+          <!-- DESKTOP IMAGE -->
+          <div class="hidden justify-center lg:flex lg:justify-end">
+            <div class="group relative w-full max-w-[420px] overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white p-6">
+              <div class="absolute left-1/2 top-10 h-[2px] w-40 -translate-x-1/2 bg-[#E5E7EB]"></div>
+
+              <div class="relative mx-auto mt-8 overflow-hidden rounded-2xl bg-[#FF2D20]">
+                <img
+                  src="/img/about/Asli Hover.png"
+                  alt="Imam Zamhari"
+                  class="relative z-10 h-auto w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -685,6 +794,8 @@
 
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+
+const isMobileMenuOpen = ref(false)
 
 const aboutCard = ref<HTMLElement | null>(null)
 const aboutCardHeight = ref(0)
