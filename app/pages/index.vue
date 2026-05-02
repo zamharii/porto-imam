@@ -191,8 +191,8 @@
         <img
           src="/img/hero/figma.svg"
           class="absolute z-10
-                w-[25%] sm:w-[20%] md:w-[14%] lg:w-[11%]
-                bottom-[8%] sm:bottom-[18%] md:bottom-[5%]
+                w-[20%] sm:w-[20%] md:w-[14%] lg:w-[11%]
+                bottom-[14%] sm:bottom-[18%] md:bottom-[11%]
                 left-[-1%] sm:left-[7%] md:left-[6%]
                 rotate-[-12deg]
                 animate-float-slow
@@ -206,8 +206,8 @@
         <img
           src="/img/hero/photoshop.svg"
           class="absolute z-10
-                w-[22%] sm:w-[16%] md:w-[12%] lg:w-[9%]
-                bottom-[5%] sm:bottom-[11%] md:bottom-[8%]
+                w-[19%] sm:w-[16%] md:w-[12%] lg:w-[9%]
+                bottom-[11%] sm:bottom-[11%] md:bottom-[8%]
                 right-[-2%] sm:right-[6%]
                 rotate-[8deg]
                 animate-float-slow
@@ -282,52 +282,107 @@
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="relative -mt-24 bg-white py-20 sm:-mt-32 sm:py-24 lg:-mt-40 lg:py-28">
+    <!-- MY PORTFOLIO SECTION -->
+    <section 
+      id="about" 
+      class="relative -mt-24 pt-0 pb-20 
+            bg-white
+            lg:bg-[url('/img/about/Background%20About.svg')] 
+            lg:bg-cover lg:bg-center lg:bg-no-repeat
+            sm:-mt-32 sm:pb-24 lg:-mt-40 lg:pb-28"
+    >
       <div class="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
-        <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
+        <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.35fr_0.65fr]">
           
           <!-- LEFT CONTENT -->
           <div>
-            <!-- BADGE -->
+            <!-- DESKTOP BADGE -->
             <div
-              class="inline-flex rounded-full bg-[#FFEBEB] px-4 py-2 text-[12px] font-medium text-[#BC0003]"
+              class="hidden rounded-full bg-[#FFEBEB] px-4 py-2 text-[12px] font-medium text-[#BC0003] lg:inline-flex"
               style="font-family: 'Geist Mono', monospace;"
             >
               UI/UX Design
             </div>
 
-            <!-- TITLE -->
+            <!-- DESKTOP TITLE -->
             <h2
-              class="mt-8 text-[52px] font-medium leading-none text-[#2B384C] sm:text-[64px] lg:text-[76px]"
-              style="font-family: 'Philosopher', serif;"
+              class="mt-8 hidden text-[52px] font-medium leading-none text-[#2B384C] sm:text-[64px] lg:block lg:text-[76px]"
+              style="font-family: 'Instrument Sans', sans-serif; font-weight:500;"
             >
               My Portfolio
             </h2>
 
             <!-- MOBILE IMAGE -->
-            <div class="mt-10 flex justify-center lg:hidden">
-              <div class="group relative w-full max-w-[340px] overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white p-6">
-                <div class="absolute left-1/2 top-10 h-[2px] w-40 -translate-x-1/2 bg-[#E5E7EB]"></div>
+            <div class="flex justify-center lg:hidden">
+              <div class="group relative h-[430px] w-full max-w-[360px] overflow-visible rounded-2xl border border-[#E5E7EB] bg-white px-6 py-6">
+                
+                <!-- TOP LINE -->
+                <div class="absolute left-1/2 top-8 h-[2px] w-52 -translate-x-1/2 bg-[#E5E7EB]"></div>
 
-                <div class="relative mx-auto mt-8 overflow-hidden rounded-2xl bg-[#FF2D20]">
-                  <img
-                    src="/img/about/Asli Hover.png"
-                    alt="Imam Zamhari"
-                    class="relative z-10 h-auto w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                <!-- RED BOX -->
+                <div class="absolute bottom-6 left-6 right-6 h-[80%] overflow-hidden rounded-2xl bg-[#FF2D20]">
+
+                  <!-- BIG CIRCLE -->
+                  <div class="absolute left-1/2 bottom-0 
+                              -translate-x-1/2 translate-y-1/2
+                              h-[190%] w-[190%]
+                              rounded-full bg-white/25
+                              transition-transform duration-500 origin-bottom
+                              group-hover:scale-110">
+                  </div>
+
+                  <!-- MEDIUM -->
+                  <div class="absolute left-1/2 bottom-0 
+                              -translate-x-1/2 translate-y-1/2
+                              h-[165%] w-[165%]
+                              rounded-full bg-white/15
+                              transition-transform duration-500 origin-bottom
+                              group-hover:scale-110">
+                  </div>
+
+                  <!-- SMALL -->
+                  <div class="absolute left-1/2 bottom-0 
+                              -translate-x-1/2 translate-y-1/2
+                              h-[140%] w-[140%]
+                              rounded-full bg-white/[0.075]
+                              transition-transform duration-500 origin-bottom
+                              group-hover:scale-110">
+                  </div>
+
                 </div>
+
+                <!-- IMAGE -->
+                <img
+                  src="/img/about/foto-imam.png"
+                  alt="Imam Zamhari"
+                  class="absolute bottom-6 left-1/2 z-10 h-[100%] w-auto max-w-none -translate-x-1/2 object-contain transition-transform duration-500 ease-out origin-bottom group-hover:scale-110"
+                />
               </div>
             </div>
 
+            <!-- MOBILE BADGE -->
+            <div
+              class="mt-10 inline-flex rounded-full bg-[#FFEBEB] px-4 py-2 text-[12px] font-medium text-[#BC0003] lg:hidden"
+              style="font-family: 'Geist Mono', monospace;"
+            >
+              UI/UX Design
+            </div>
+
+            <!-- MOBILE TITLE -->
+            <h2
+              class="mt-5 text-[52px] font-medium leading-none text-[#2B384C] sm:text-[64px] lg:hidden"
+              style="font-family: 'Instrument Sans', sans-serif; font-weight:500;"
+            >
+              My Portfolio
+            </h2>
+
             <!-- DESCRIPTION -->
             <div
-              class="mt-8 max-w-2xl space-y-6 text-[16px] leading-[2] text-[#2B384C] sm:text-[18px]"
+              class="mt-8 max-w-[760px] space-y-6 text-[16px] leading-[2] text-[#2B384C] sm:text-[18px]"
+              style="font-family: 'Instrument Sans', sans-serif; font-weight:500;"
             >
               <p>
-                Hai, saya <span class="font-semibold text-[#FF2D20]">Imam Zamhari</span>,
+                Hai, saya <span class="text-[#FF2D20]">Imam Zamhari</span>,
                 seorang Desainer UI/UX yang berbasis di Indonesia. Saya senang mengeksplorasi ide
                 dan mengubahnya menjadi pengalaman digital yang intuitif dan ramah pengguna.
               </p>
@@ -356,24 +411,19 @@
               </div>
             </div>
 
-            <!-- BUTTONS -->
+            <!-- BUTTON -->
             <div class="mt-10 flex flex-col gap-4 sm:flex-row">
               <a
                 href="mailto:zamhariimam0@gmail.com"
-                class="inline-flex items-center justify-center gap-2 rounded-md bg-[#FF2D20] px-8 py-4 text-[16px] font-normal text-white transition hover:bg-[#FF6258]"
+                class="inline-flex items-center justify-center gap-2 rounded-md bg-[#FF2D20] px-8 py-4 text-[16px] text-white transition hover:bg-[#FF6258]"
                 style="font-family: 'Inter', sans-serif;"
               >
                 Get in Touch
-                <span class="material-symbols-outlined text-[18px] leading-none">
-                  arrow_forward
-                </span>
               </a>
 
               <a
                 href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center justify-center rounded-md border border-[#D1D5DB] px-8 py-4 text-[16px] font-normal text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]"
+                class="inline-flex items-center justify-center rounded-md border border-[#D1D5DB] px-8 py-4 text-[16px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]"
                 style="font-family: 'Inter', sans-serif;"
               >
                 LinkedIn
@@ -383,18 +433,49 @@
 
           <!-- DESKTOP IMAGE -->
           <div class="hidden justify-center lg:flex lg:justify-end">
-            <div class="group relative w-full max-w-[420px] overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white p-6">
-              <div class="absolute left-1/2 top-10 h-[2px] w-40 -translate-x-1/2 bg-[#E5E7EB]"></div>
+            <div class="group relative h-[470px] w-full max-w-[420px] overflow-visible rounded-2xl border border-[#E5E7EB] bg-white px-6 py-6">
+              
+              <!-- TOP LINE -->
+              <div class="absolute left-1/2 top-8 h-[2px] w-60 -translate-x-1/2 bg-[#E5E7EB]"></div>
 
-              <div class="relative mx-auto mt-8 overflow-hidden rounded-2xl bg-[#FF2D20]">
-                <img
-                  src="/img/about/Asli Hover.png"
-                  alt="Imam Zamhari"
-                  class="relative z-10 h-auto w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110"
-                  loading="lazy"
-                  decoding="async"
-                />
+              <!-- RED BOX -->
+              <div class="absolute bottom-6 left-6 right-6 h-[80%] overflow-hidden rounded-2xl bg-[#FF2D20]">
+
+                <!-- BIG -->
+                <div class="absolute left-1/2 bottom-0 
+                            -translate-x-1/2 translate-y-1/2
+                            h-[190%] w-[190%]
+                            rounded-full bg-white/25
+                            transition-transform duration-500 origin-bottom
+                            group-hover:scale-110">
+                </div>
+
+                <!-- MEDIUM -->
+                <div class="absolute left-1/2 bottom-0 
+                            -translate-x-1/2 translate-y-1/2
+                            h-[165%] w-[165%]
+                            rounded-full bg-white/15
+                            transition-transform duration-500 origin-bottom
+                            group-hover:scale-110">
+                </div>
+
+                <!-- SMALL -->
+                <div class="absolute left-1/2 bottom-0 
+                            -translate-x-1/2 translate-y-1/2
+                            h-[140%] w-[140%]
+                            rounded-full bg-white/[0.075]
+                            transition-transform duration-500 origin-bottom
+                            group-hover:scale-110">
+                </div>
+
               </div>
+
+              <!-- IMAGE -->
+              <img
+                src="/img/about/foto-imam.png"
+                alt="Imam Zamhari"
+                class="absolute bottom-6 left-1/2 z-10 h-[105%] w-auto max-w-none -translate-x-1/2 object-contain transition-transform duration-500 ease-out origin-bottom group-hover:scale-110"
+              />
             </div>
           </div>
 
@@ -402,150 +483,420 @@
       </div>
     </section>
 
-    <!-- WORK PROCESS -->
-    <ClientOnly>
-      <section class="relative z-10 bg-slate-100/70 pt-10 sm:pt-5 pb-20 sm:pb-24">
-        <div class="mx-auto max-w-6xl px-6">
-          <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-
-            <!-- LEFT -->
-            <div class="pt-2 lg:pt-0 flex flex-col justify-center">
-              <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-                Work Process
-              </h3>
-
-              <p class="mt-5 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base">
-                Proses kerja saya dimulai dengan memahami kebutuhan pengguna dan tujuan produk secara menyeluruh.
-                Setiap tahap dilakukan secara terstruktur untuk memastikan solusi yang dihasilkan relevan dan mudah digunakan.
-              </p>
-
-              <p class="mt-4 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base">
-                Pendekatan yang saya gunakan berfokus pada pengguna, mulai dari riset hingga implementasi,
-                dengan tujuan menghasilkan desain yang fungsional dan konsisten.
-              </p>
-            </div>
-
-            <!-- RIGHT -->
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:grid-rows-2 sm:grid-flow-col group">
-
-              <div class="rounded-2xl bg-white p-6 ring-1 ring-slate-100 transition-all duration-300 md:group-hover:opacity-40 md:group-hover:scale-[0.98] md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl">
-                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A]">
-                  <span class="material-symbols-outlined text-[22px]">calendar_month</span>
-                </div>
-                <h4 class="mt-5 font-extrabold text-slate-900">1. Research</h4>
-                <p class="mt-2 text-sm text-slate-600">Mengumpulkan kebutuhan pengguna dan tujuan produk secara terstruktur.</p>
-              </div>
-
-              <div class="rounded-2xl bg-white p-6 ring-1 ring-slate-100 transition-all duration-300 md:group-hover:opacity-40 md:group-hover:scale-[0.98] md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl">
-                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A]">
-                  <span class="material-symbols-outlined text-[22px]">brush</span>
-                </div>
-                <h4 class="mt-5 font-extrabold text-slate-900">2. Design</h4>
-                <p class="mt-2 text-sm text-slate-600">Menyusun wireframe dan desain visual yang sederhana dan konsisten.</p>
-              </div>
-
-              <div class="rounded-2xl bg-white p-6 ring-1 ring-slate-100 transition-all duration-300 md:group-hover:opacity-40 md:group-hover:scale-[0.98] md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl">
-                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A]">
-                  <span class="material-symbols-outlined text-[22px]">monitoring</span>
-                </div>
-                <h4 class="mt-5 font-extrabold text-slate-900">3. Analyze</h4>
-                <p class="mt-2 text-sm text-slate-600">Mengevaluasi desain melalui feedback dan pengujian secara berkala.</p>
-              </div>
-
-              <div class="rounded-2xl bg-white p-6 ring-1 ring-slate-100 transition-all duration-300 md:group-hover:opacity-40 md:group-hover:scale-[0.98] md:hover:!opacity-100 md:hover:!scale-100 md:hover:-translate-y-2 md:hover:shadow-xl">
-                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFF2D880] text-[#FFD45A]">
-                  <span class="material-symbols-outlined text-[22px]">rocket_launch</span>
-                </div>
-                <h4 class="mt-5 font-extrabold text-slate-900">4. Launch</h4>
-                <p class="mt-2 text-sm text-slate-600">Menyiapkan desain untuk pengembangan dan implementasi.</p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-    </ClientOnly>
-
-    <!-- ✅ PORTFOLIO FIX -->
-    <ClientOnly>
-      <section class="bg-white py-20 sm:py-24">
-        <div class="mx-auto max-w-6xl px-6">
+    <!-- COMPANY LOGO SECTION -->
+    <section class="relative z-10 border-y border-[#E5E7EB] bg-white">
+      <!-- CONTAINER -->
+      <div class="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
+        <div class="grid grid-cols-1 lg:grid-cols-[360px_1fr]">
           
-          <!-- HEADER -->
-          <div class="text-center">
-            <h3 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-              Portfolio
-            </h3>
-            <p class="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base">
-              Menampilkan beberapa proyek desain yang telah dikerjakan, dengan fokus pada pengalaman pengguna,
-              tampilan yang jelas, dan solusi yang sesuai kebutuhan.
+          <!-- STATIC TEXT -->
+          <div class="flex min-h-[200px] items-center justify-center border-b border-l border-r border-[#E5E7EB] px-6 py-8 sm:px-10 lg:border-b-0 lg:border-r lg:px-16">
+            <p
+              class="max-w-[300px] text-left text-[16px] font-medium uppercase leading-[1.5] tracking-[0.02em] text-[#2B384C]"
+              style="font-family: 'Geist Mono', monospace;"
+            >
+              PERUSAHAAN YANG TELAH BEKERJA SAMA DALAM BERBAGAI PROYEK DESAIN.
             </p>
           </div>
 
-          <!-- GRID -->
-          <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- MOVING LOGOS -->
+          <div class="relative min-h-[150px] overflow-hidden border-x border-[#E5E7EB] lg:border-l-0">
             
-            <article
-              v-for="(item, index) in portfolioItems.slice(0, 6)"
-              :key="item.title"
-              class="group overflow-hidden rounded-2xl bg-white ring-1 ring-slate-100
-                    transition-all duration-300
+            <!-- LEFT FADE -->
+            <div class="pointer-events-none absolute left-0 top-0 z-20 h-full w-32 bg-gradient-to-r from-white to-transparent"></div>
 
-                    md:hover:-translate-y-2
-                    md:hover:shadow-xl md:hover:shadow-slate-200/70"
-            >
-              <!-- IMAGE -->
-              <div class="aspect-[16/10] overflow-hidden bg-slate-200">
-                <img
-                  class="h-full w-full object-cover transition-transform duration-500 md:group-hover:scale-105"
-                  :src="item.image"
-                  :alt="item.title"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+            <!-- RIGHT FADE -->
+            <div class="pointer-events-none absolute right-0 top-0 z-20 h-full w-20 bg-gradient-to-l from-white to-transparent"></div>
 
-              <!-- CONTENT -->
-              <div class="p-6">
-                <div class="text-xs font-semibold tracking-widest text-slate-400">
-                  {{ item.category }}
+            <!-- RIGHT STROKE -->
+            <div class="pointer-events-none absolute right-0 top-0 z-30 h-full w-[0.2px] bg-[#E5E7EB]"></div>
+
+            <!-- MARQUEE -->
+            <div class="flex h-full w-max animate-company-marquee">
+              <template v-for="loop in 3" :key="loop">
+                <div
+                  v-for="client in clientLogos"
+                  :key="`${loop}-${client.name}`"
+                  class="flex min-h-[150px] w-[360px] flex-shrink-0 items-center justify-center border-r border-[#E5E7EB]"
+                >
+                  <img
+                    :src="client.src"
+                    :alt="client.name"
+                    class="max-h-[150px] w-auto object-contain"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
-
-                <h4 class="mt-2 text-lg font-extrabold text-slate-900">
-                  {{ item.title }}
-                </h4>
-
-                <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                  {{ item.description }}
-                </p>
-
-                <!-- BUTTON -->
-                <div class="mt-6">
-                  <a
-                    :href="item.href"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 rounded-md bg-[#FFD45A] px-5 py-3 text-sm font-semibold text-white
-                          transition-all duration-300
-
-                          md:group-hover:translate-x-1
-                          hover:bg-[#FFD45A]
-                          focus:outline-none focus:ring-2 focus:ring-[#FFD45A] focus:ring-offset-2"
-                  >
-                    {{ item.buttonLabel ?? 'View' }}
-                    <span class="material-symbols-outlined text-[18px] leading-none">
-                      arrow_forward
-                    </span>
-                  </a>
-                </div>
-
-              </div>
-            </article>
+              </template>
+            </div>
 
           </div>
+
         </div>
-      </section>
-    </ClientOnly>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE SECTION -->
+    <section id="experience" class="relative border-b border-[#E5E7EB] bg-white">
+      <div class="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
+
+        <!-- HEADER: DASHED ONLY, NO TOP STROKE -->
+        <div class="border-dashed-custom border-[#E5E7EB]">
+          <div class="border-b border-[#E5E7EB] px-6 py-16 text-center sm:px-10 lg:px-16 lg:py-20">
+            <div
+              class="inline-flex rounded-full bg-[#FFEBEB] px-4 py-2 text-[12px] font-medium text-[#BC0003]"
+              style="font-family: 'Geist Mono', monospace;"
+            >
+              About Me
+            </div>
+
+            <h2
+              class="mt-8 text-[44px] font-medium leading-none text-[#111827] sm:text-[64px] lg:text-[76px]"
+              style="font-family: 'Instrument Sans', sans-serif; font-weight:500;"
+            >
+              Work Experience
+            </h2>
+          </div>
+        </div>
+
+        <!-- CONTENT: SOLID STROKE -->
+        <div class="border-x border-solid border-[#E5E7EB]">
+          <div class="overflow-visible px-6 py-14 sm:px-10 lg:px-16 lg:pt-20 lg:pb-24 xl:h-[720px] xl:overflow-hidden">
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+
+              <!-- LEFT -->
+              <div style="font-family: 'Instrument Sans', sans-serif; font-weight:500;">
+                <h3 class="text-[32px] font-medium leading-tight text-[#111827] sm:text-[38px]">
+                  Pengalaman dalam Desain Digital dan Kreatif
+                </h3>
+
+                <p class="mt-8 max-w-[680px] text-[16px] leading-[2] text-[#2B384C] sm:text-[18px]">
+                  Saya memiliki pengalaman dalam merancang produk digital, membuat tampilan antarmuka
+                  yang mudah digunakan, serta mendukung kebutuhan visual dan pemasaran digital untuk
+                  berbagai jenis bisnis.
+                </p>
+
+                <div class="mt-10 space-y-7">
+                  <div class="flex gap-4">
+                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#FFEBEB] text-[#BC0003]">
+                      <span class="material-symbols-outlined text-[22px]">draw</span>
+                    </div>
+                    <div>
+                      <h4 class="text-[16px] font-medium text-[#111827] sm:text-[18px]">
+                        UI/UX Design
+                      </h4>
+                      <p class="mt-1 text-[14px] leading-[1.8] text-[#6B7280] sm:text-[16px]">
+                        Membuat wireframe, prototype, dan alur penggunaan yang intuitif.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-4">
+                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#FFEBEB] text-[#BC0003]">
+                      <span class="material-symbols-outlined text-[22px]">campaign</span>
+                    </div>
+                    <div>
+                      <h4 class="text-[16px] font-medium text-[#111827] sm:text-[18px]">
+                        Creative & Marketing
+                      </h4>
+                      <p class="mt-1 text-[14px] leading-[1.8] text-[#6B7280] sm:text-[16px]">
+                        Mendukung kebutuhan desain grafis, campaign, dan konten digital.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- RIGHT -->
+              <div class="relative overflow-visible xl:overflow-hidden xl:-mr-40">
+
+                <!-- TABS -->
+                <div class="mb-8 flex justify-center overflow-x-auto xl:justify-start xl:pl-[120px]">
+                  <div class="relative inline-flex rounded-full border border-[#E5E7EB] bg-white p-2">
+                    <button
+                      v-for="(item, key) in experienceItems"
+                      :key="key"
+                      @click="activeExperience = key"
+                      class="rounded-full px-5 py-3 text-[13px] font-medium transition sm:px-6 sm:text-[14px]"
+                      :class="activeExperience === key
+                        ? 'relative z-10 bg-white text-[#111827] shadow-md'
+                        : 'text-[#6B7280] hover:text-[#BC0003]'"
+                    >
+                      {{ item.label }}
+                    </button>
+                  </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="min-h-[560px] overflow-hidden rounded-2xl border border-[#FFEBEB] bg-[#F8FAFC] xl:min-h-[760px]">
+                  <div class="flex items-center gap-2 border-b border-[#E5E7EB] bg-white px-5 py-4">
+                    <span class="h-3 w-3 rounded-full bg-[#FF5F57]"></span>
+                    <span class="h-3 w-3 rounded-full bg-[#FFBD2E]"></span>
+                    <span class="h-3 w-3 rounded-full bg-[#28C840]"></span>
+
+                    <p
+                      class="ml-4 text-[12px] text-[#6B7280]"
+                      style="font-family: 'Geist Mono', monospace;"
+                    >
+                      {{ activeExperienceItem.file }}
+                    </p>
+                  </div>
+
+                  <div
+                    class="min-h-[500px] max-w-full space-y-6 p-5 text-[13px] leading-[2] text-[#2B384C] sm:p-6 sm:text-[14px] lg:min-h-[700px] xl:max-w-[600px]"
+                    style="font-family: 'Geist Mono', monospace;"
+                  >
+                    <div>
+                      <p>Role: "{{ activeExperienceItem.role }}"</p>
+                      <p>Company: "{{ activeExperienceItem.company }}"</p>
+                    </div>
+
+                    <p v-if="activeExperienceItem.intro">
+                      {{ activeExperienceItem.intro }}
+                    </p>
+
+                    <div>
+                      <p>Responsibilities:</p>
+
+                      <ol class="mt-4 space-y-4">
+                        <li
+                          v-for="(task, index) in activeExperienceItem.responsibilities"
+                          :key="task"
+                          class="flex gap-3"
+                        >
+                          <span class="w-6 shrink-0 text-[#6B7280]">
+                            {{ index + 1 }}.
+                          </span>
+                          <span class="flex-1">
+                            {{ task }}
+                          </span>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<!-- WORK PROJECTS SECTION -->
+<section id="works" class="relative border-b border-[#E5E7EB] bg-white">
+  <div class="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
+
+    <!-- HEADER -->
+    <div class="border-x border-dashed border-[#E5E7EB]">
+      <div class="border-b border-[#E5E7EB] px-6 py-16 text-center sm:px-10 lg:px-16 lg:py-20">
+        <div
+          class="inline-flex rounded-full bg-[#FFEBEB] px-4 py-2 text-[12px] font-medium text-[#BC0003]"
+          style="font-family: 'Geist Mono', monospace;"
+        >
+          Works
+        </div>
+
+        <h2
+          class="mt-8 text-[44px] font-medium leading-none text-[#111827] sm:text-[64px] lg:text-[76px]"
+          style="font-family: 'Instrument Sans', sans-serif; font-weight:500;"
+        >
+          Projects
+        </h2>
+      </div>
+    </div>
+
+    <!-- CATEGORY -->
+    <div class="border-x border-[#E5E7EB] px-6 py-10 sm:px-10 lg:px-16">
+      <div class="flex items-center gap-8">
+        <div class="h-10 w-[3px] bg-[#BC0003]"></div>
+        <h3
+          class="text-[28px] font-medium text-[#111827]"
+          style="font-family: 'Instrument Sans', sans-serif;"
+        >
+          Website
+        </h3>
+        <div class="h-[1px] flex-1 bg-[#E5E7EB]"></div>
+      </div>
+    </div>
+
+    <!-- PROJECT GRID -->
+    <div class="border-x border-[#E5E7EB]">
+      <div class="grid grid-cols-1 lg:grid-cols-[45fr_55fr]">
+        
+        <!-- Sustainable Living Labs -->
+        <article class="border-b border-r border-[#E5E7EB] p-6 sm:p-10">
+          <h4 class="text-[22px] font-medium text-[#111827]">Sustainable Living Labs</h4>
+          <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
+            Website organisasi yang menampilkan program, proyek, dan inisiatif di bidang keberlanjutan.
+          </p>
+
+          <a href="https://sustainablelivinglab.org/" target="_blank" class="group mt-6 inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
+            Go to Website
+            <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+              arrow_outward
+            </span>
+          </a>
+
+          <!-- TODO: asset belum tersedia di public/img/projects/sl2/ -->
+          <!-- <img src="/img/projects/sl2/website.webp" class="mt-8 w-full rounded-xl border border-[#E5E7EB] object-cover" /> -->
+        </article>
+
+        <!-- True Rice -->
+        <article class="border-b border-[#E5E7EB] p-6 sm:p-10">
+          <h4 class="text-[22px] font-medium text-[#111827]">True Rice</h4>
+          <p class="mt-4 max-w-2xl text-[15px] leading-[1.8] text-[#2B384C]">
+            Platform digital dengan fokus pada penyajian data dan informasi produksi beras secara terstruktur.
+          </p>
+
+          <a href="https://truerice.sustainablelivinglab.org/" target="_blank" class="group mt-6 inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
+            Go to Website
+            <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+              arrow_outward
+            </span>
+          </a>
+
+          <div class="relative mt-8 h-[320px] overflow-hidden">
+            <button
+              v-for="(img, index) in getProjectImageOrder('trueRice')"
+              :key="img.title"
+              type="button"
+              class="absolute left-0 w-full rounded-xl border border-[#E5E7EB] bg-white transition-all duration-300 ease-out"
+              :class="[
+                index === 0 ? 'top-[84px] z-40 scale-100 opacity-100' : '',
+                index === 1 ? 'top-[56px] z-30 scale-[0.96] opacity-80' : '',
+                index === 2 ? 'top-[28px] z-20 scale-[0.92] opacity-60' : '',
+                index === 3 ? 'top-0 z-10 scale-[0.88] opacity-40' : '',
+              ]"
+              @click="rotateProjectImages('trueRice', projectImageGroups.trueRice.findIndex((item) => item.title === img.title))"
+            >
+              <div class="border-b border-[#E5E7EB] px-4 py-2 text-left text-[12px] text-[#6B7280]">
+                {{ img.title }}
+              </div>
+              <img :src="img.image" :alt="img.title" class="h-[220px] w-full object-cover" />
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-[55fr_45fr]">
+        
+        <!-- Intel -->
+        <article class="border-b border-r border-[#E5E7EB] p-6 sm:p-10">
+          <h4 class="text-[22px] font-medium text-[#111827]">Intel AI4FW SS</h4>
+          <p class="mt-4 max-w-2xl text-[15px] leading-[1.8] text-[#2B384C]">
+            Dashboard admin untuk monitoring data dan pengelolaan program terpusat dalam satu sistem terintegrasi.
+          </p>
+
+          <a href="https://intel-digital-readiness-support.sustainablelivinglab.org/" target="_blank" class="group mt-6 inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
+            Go to Website
+            <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+              arrow_outward
+            </span>
+          </a>
+
+          <div class="relative mt-8 h-[320px] overflow-hidden">
+            <button
+              v-for="(img, index) in getProjectImageOrder('intel')"
+              :key="img.title"
+              type="button"
+              class="absolute left-0 w-full rounded-xl border border-[#E5E7EB] bg-white transition-all duration-300 ease-out"
+              :class="[
+                index === 0 ? 'top-[84px] z-40 scale-100 opacity-100' : '',
+                index === 1 ? 'top-[56px] z-30 scale-[0.96] opacity-80' : '',
+                index === 2 ? 'top-[28px] z-20 scale-[0.92] opacity-60' : '',
+                index === 3 ? 'top-0 z-10 scale-[0.88] opacity-40' : '',
+              ]"
+              @click="rotateProjectImages('intel', projectImageGroups.intel.findIndex((item) => item.title === img.title))"
+            >
+              <div class="border-b border-[#E5E7EB] px-4 py-2 text-left text-[12px] text-[#6B7280]">
+                {{ img.title }}
+              </div>
+              <img :src="img.image" :alt="img.title" class="h-[220px] w-full object-cover" />
+            </button>
+          </div>
+        </article>
+
+        <!-- Satria -->
+        <article class="border-b border-[#E5E7EB] p-6 sm:p-10">
+          <h4 class="text-[22px] font-medium text-[#111827]">Satria Nusa Enjinering</h4>
+          <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
+            Website perusahaan yang menyediakan informasi layanan energi, profil perusahaan, dan proyek.
+          </p>
+
+          <a href="https://satrianusa.group/" target="_blank" class="group mt-6 inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
+            Go to Website
+            <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+              arrow_outward
+            </span>
+          </a>
+
+          <!-- TODO: asset belum tersedia di public/img/projects/satria/ -->
+          <!-- <img src="/img/projects/satria/website.webp" class="mt-8 w-full rounded-xl border border-[#E5E7EB] object-cover" /> -->
+        </article>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-[45fr_55fr]">
+        
+        <!-- Annaunna -->
+        <article class="border-r border-[#E5E7EB] p-6 sm:p-10">
+          <h4 class="text-[22px] font-medium text-[#111827]">Annaunna Trust</h4>
+          <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
+            Website organisasi yang menampilkan program sosial dan pemberdayaan masyarakat secara terstruktur.
+          </p>
+
+          <a href="https://www.annaunnatrust.org/" target="_blank" class="group mt-6 inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
+            Go to Website
+            <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+              arrow_outward
+            </span>
+          </a>
+
+          <!-- TODO: asset belum tersedia di public/img/projects/annaunna/ -->
+          <!-- <img src="/img/projects/annaunna/website.webp" class="mt-8 w-full rounded-xl border border-[#E5E7EB] object-cover" /> -->
+        </article>
+
+        <!-- Climate -->
+        <article class="p-6 sm:p-10">
+          <h4 class="text-[22px] font-medium text-[#111827]">Climate Hub Asia</h4>
+          <p class="mt-4 max-w-2xl text-[15px] leading-[1.8] text-[#2B384C]">
+            Website Climate Hub Asia adalah platform yang fokus pada isu perubahan iklim di kawasan Asia.
+          </p>
+
+          <a href="https://climate-hub.asia/" target="_blank" class="group mt-6 inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
+            Go to Website
+            <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+              arrow_outward
+            </span>
+          </a>
+
+          <div class="relative mt-8 h-[320px] overflow-hidden">
+            <button
+              v-for="(img, index) in getProjectImageOrder('climate')"
+              :key="img.title"
+              type="button"
+              class="absolute left-0 w-full rounded-xl border border-[#E5E7EB] bg-white transition-all duration-300 ease-out"
+              :class="[
+                index === 0 ? 'top-[84px] z-40 scale-100 opacity-100' : '',
+                index === 1 ? 'top-[56px] z-30 scale-[0.96] opacity-80' : '',
+                index === 2 ? 'top-[28px] z-20 scale-[0.92] opacity-60' : '',
+                index === 3 ? 'top-0 z-10 scale-[0.88] opacity-40' : '',
+              ]"
+              @click="rotateProjectImages('climate', projectImageGroups.climate.findIndex((item) => item.title === img.title))"
+            >
+              <div class="border-b border-[#E5E7EB] px-4 py-2 text-left text-[12px] text-[#6B7280]">
+                {{ img.title }}
+              </div>
+              <img :src="img.image" :alt="img.title" class="h-[220px] w-full object-cover" />
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- ✅ FREELANCE FIX -->
     <ClientOnly>
@@ -793,22 +1144,68 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, reactive, ref } from 'vue'
+
+const activeExperience = ref('sl2')
+
+const experienceItems = {
+  sl2: {
+    label: 'SL2',
+    file: 'Sustainable Living Lab — Experience.txt',
+    role: 'UI/UX Product Designer',
+    company: 'PT Sustainable Living Lab',
+    intro: '',
+    responsibilities: [
+      'Mengembangkan wireframe dan prototype untuk dashboard dan sistem manajemen berbasis kebutuhan pengguna.',
+      'Berkolaborasi dengan tim dalam mengembangkan desain yang konsisten dan sesuai dengan kebutuhan platform.',
+      'Mengevaluasi tampilan dan alur penggunaan untuk meningkatkan efisiensi serta kemudahan dalam penggunaan sistem.'
+    ]
+  },
+  sne: {
+    label: 'SNE',
+    file: 'Satria Nusa Enjinering — Experience.txt',
+    role: 'UI/UX Product Designer',
+    company: 'PT Satria Nusa Enjinering',
+    intro: '',
+    responsibilities: [
+      'Melakukan riset pengguna dan memahami kebutuhan untuk merancang solusi desain yang relevan.',
+      'Membuat wireframe dan prototype interaktif untuk membantu alur penggunaan menjadi lebih jelas dan terstruktur.',
+      'Bekerja sama dengan tim developer dalam mengimplementasikan desain yang konsisten dan mudah digunakan.'
+    ]
+  },
+  dro: {
+    label: 'DRO',
+    file: 'Dro Official — Experience.txt',
+    role: 'Graphic Designer',
+    company: 'Dro Official',
+    intro: 'Dro Official adalah perusahaan di bidang e-commerce. Strategi pemasarannya mengandalkan iklan di platform TikTok, Facebook, dan Instagram. Saya memulai karir saya dari divisi dan deskripsi pekerjaan yang saya cantumkan sebagai berikut:',
+    responsibilities: [
+      'Desain grafis',
+      'Desain kemasan',
+      'Desain marketplace',
+      'Motion graphics'
+    ]
+  },
+  ouzen: {
+    label: 'OUZEN',
+    file: 'Ouzen Group — Experience.txt',
+    role: 'Digital Marketing',
+    company: 'Ouzen Group',
+    intro: 'PT. Ouzen Anugerah Indonesia atau lebih dikenal sebagai Grup Ouzen adalah perusahaan di sektor e-commerce. Saya memulai karir saya dari divisi dan deskripsi pekerjaan yang saya cantumkan sebagai berikut:',
+    responsibilities: [
+      'Desainer grafis dan pemasaran Instagram',
+      'Manajemen pemasaran influencer',
+      'Pemasaran digital dan strategi kreatif kampanye di platform Meta Ads',
+      'Penulis konten dan dukungan strategi singkat'
+    ]
+  }
+}
+
+const activeExperienceItem = computed(() => {
+  return experienceItems[activeExperience.value as keyof typeof experienceItems]
+})
 
 const isMobileMenuOpen = ref(false)
-
-const aboutCard = ref<HTMLElement | null>(null)
-const aboutCardHeight = ref(0)
-
-const aboutCardOverlap = computed(() => Math.round(aboutCardHeight.value * 0.75))
-const heroBottomPadding = computed(() => Math.max(260, aboutCardOverlap.value + 140))
-
-let resizeObserver: ResizeObserver | null = null
-
-const updateCardHeight = () => {
-  if (!aboutCard.value) return
-  aboutCardHeight.value = aboutCard.value.getBoundingClientRect().height
-}
 
 type PortfolioItem = {
   category: string
@@ -863,9 +1260,9 @@ const portfolioItems: PortfolioItem[] = [
   {
     category: 'UI-UX DESIGN',
     title: 'AI Tutor Web App',
-    description: 'Platform pembelajaran berbasis AI dengan materi interaktif, pelacakan progres, dan pengalaman belajar yang personal.',
+    description: 'Platform pembelajaran berbasis AI dengan materi interaktif.',
     image: '/img/portfolio/ai-tutor-web.webp',
-    href: 'https://www.figma.com/proto/GONWQ8FYZGNcEVJAH7Atao/AI-Tutor-Web-App-SL2?node-id=132-242&viewport=788%2C684%2C0.08&t=naGdUiT81dUEYr7K-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=132%3A242&page-id=132%3A240',
+    href: 'https://www.figma.com/proto/GONWQ8FYZGNcEVJAH7Atao/AI-Tutor-Web-App-SL2',
     buttonLabel: 'Show Prototype',
   }
 ]
@@ -882,7 +1279,7 @@ const freelanceItems: FreelanceItem[] = [
   {
     name: "Let's Sparring",
     title: 'Aplikasi pemesanan lapangan olahraga',
-    description: 'Dengan fokus pada kemudahan pencarian, pemilihan jadwal, dan proses reservasi.',
+    description: 'Dengan fokus pada kemudahan reservasi.',
     image: '/img/freelance/ayosparing.svg',
     to: '/lets-sparring'
   },
@@ -896,84 +1293,90 @@ const freelanceItems: FreelanceItem[] = [
   {
     name: 'GIS',
     title: 'Aplikasi e-commerce sederhana',
-    description: 'Dengan fitur pencarian produk, pembelian, serta dukungan voucher dan event.',
+    description: 'Dengan fitur pencarian dan pembelian produk.',
     image: '/img/freelance/gis.svg',
     to: '/gis'
   }
 ]
 
+type ProjectImage = {
+  title: string
+  image: string
+}
+
+// Image stacks used in "True Rice", "Intel AI4FW SS", and "Climate Hub Asia" sections.
+// Keep these paths pointing to files inside /public so Vite won't treat them as module imports.
+const projectImageGroups = {
+  trueRice: [
+    { title: 'Overview', image: '/img/portfolio/true-rice.webp' },
+    { title: 'Details', image: '/img/portfolio/true-rice.webp' },
+    { title: 'Analytics', image: '/img/portfolio/true-rice.webp' },
+    { title: 'Settings', image: '/img/portfolio/true-rice.webp' }
+  ],
+  intel: [
+    { title: 'Dashboard', image: '/img/portfolio/intel-ai4fw-ss.webp' },
+    { title: 'Monitoring', image: '/img/portfolio/intel-ai4fw-ss.webp' },
+    { title: 'Reports', image: '/img/portfolio/intel-ai4fw-ss.webp' },
+    { title: 'Users', image: '/img/portfolio/intel-ai4fw-ss.webp' }
+  ],
+  climate: [
+    { title: 'Homepage', image: '/img/hero/background-header.svg' },
+    { title: 'Programs', image: '/img/hero/background-header.svg' },
+    { title: 'News', image: '/img/hero/background-header.svg' },
+    { title: 'Resources', image: '/img/hero/background-header.svg' }
+  ]
+} satisfies Record<string, ProjectImage[]>
+
+type ProjectImageGroupKey = keyof typeof projectImageGroups
+
+const projectImageActiveIndex = reactive<Record<ProjectImageGroupKey, number>>({
+  trueRice: 0,
+  intel: 0,
+  climate: 0
+})
+
+const getProjectImageOrder = (group: ProjectImageGroupKey) => {
+  const items = projectImageGroups[group]
+  const start = projectImageActiveIndex[group] ?? 0
+  return [...items.slice(start), ...items.slice(0, start)]
+}
+
+const rotateProjectImages = (group: ProjectImageGroupKey, nextIndex: number) => {
+  if (!Number.isFinite(nextIndex) || nextIndex < 0) return
+  const len = projectImageGroups[group]?.length ?? 0
+  if (!len) return
+  projectImageActiveIndex[group] = nextIndex % len
+}
+
+/* ✅ CLIENT LOGO (INI YANG KAMU MAU TAMBAHKAN) */
 const clientLogos = [
   { name: 'SL2', src: '/img/clients/sl2.webp' },
   { name: 'True Rice', src: '/img/clients/true-rice.webp' },
-  { name: 'Satria Nusa Engineering', src: '/img/clients/sne.webp' },
+  { name: 'SNE', src: '/img/clients/sne.webp' },
   { name: 'AUCT', src: '/img/clients/auct.webp' }
 ] as const
 
-onMounted(() => {
-  updateCardHeight()
-  if (!aboutCard.value) return
-
-  resizeObserver = new ResizeObserver(() => updateCardHeight())
-  resizeObserver.observe(aboutCard.value)
-})
-
-onBeforeUnmount(() => {
-  resizeObserver?.disconnect()
-  resizeObserver = null
-})
 </script>
-
 <style>
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-25px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-25px); }
 }
 
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
-</style>
 
-
-<style>
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-33.333%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 25s linear infinite;
-  will-change: transform;
-}
-
-/* Pause saat hover (opsional, hapus kalau mau selalu jalan) */
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
-</style>
-
-
-<style>
-/* ================= WRAPPER ================= */
 .typewriter-wrapper {
   position: relative;
   display: inline-block;
 }
 
-/* ================= TYPEWRITER ================= */
 @keyframes typing {
-  0% { max-width: 0 }
-  50% { max-width: 100% }
-  70% { max-width: 100% }
-  100% { max-width: 0 }
+  0% { max-width: 0; }
+  50% { max-width: 100%; }
+  70% { max-width: 100%; }
+  100% { max-width: 0; }
 }
 
 .animate-typewriter {
@@ -984,40 +1387,30 @@ onBeforeUnmount(() => {
   animation: typing 4s steps(25, end) infinite;
 }
 
-/* ================= CURSOR MOVE ================= */
 @keyframes cursorMove {
-  0% { left: 0% }
-  50% { left: 100% }
-  70% { left: 100% }
-  100% { left: 0% }
+  0% { left: 0%; }
+  50% { left: 100%; }
+  70% { left: 100%; }
+  100% { left: 0%; }
 }
 
-/* ================= CURSOR BLINK ================= */
 @keyframes blink {
-  0%, 100% { opacity: 0 }
-  50% { opacity: 1 }
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
 
-/* ================= CURSOR ================= */
 .cursor-bar {
   position: absolute;
-
-  /* posisi default */
   top: 50%;
   transform: translateY(-50%);
-
-  /* ukuran default */
   width: 3px;
   height: 9.5em;
-
   background: #2B384C;
-
   animation:
     cursorMove 4s steps(25, end) infinite,
     blink 1s ease-in-out infinite;
 }
 
-/* ================= MOBILE ================= */
 @media (max-width: 640px) {
   .cursor-bar {
     top: 50%;
@@ -1026,7 +1419,6 @@ onBeforeUnmount(() => {
   }
 }
 
-/* ================= TABLET ================= */
 @media (min-width: 641px) and (max-width: 1023px) {
   .cursor-bar {
     top: 52%;
@@ -1035,12 +1427,54 @@ onBeforeUnmount(() => {
   }
 }
 
-/* ================= DESKTOP ================= */
 @media (min-width: 1024px) {
   .cursor-bar {
     top: 50%;
     height: 9.5em;
     width: 3px;
   }
+}
+
+@keyframes company-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.animate-company-marquee {
+  animation: company-marquee 22s linear infinite;
+  will-change: transform;
+}
+
+</style>
+
+
+<style>
+.border-dashed-custom {
+  position: relative;
+}
+
+.border-dashed-custom::before,
+.border-dashed-custom::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #E5E7EB,
+    #E5E7EB 4px,   /* panjang garis */
+    transparent 4px,
+    transparent 12px /* jarak antar dash */
+  );
+}
+
+.border-dashed-custom::before {
+  left: 0;
+}
+
+.border-dashed-custom::after {
+  right: 0;
 }
 </style>
