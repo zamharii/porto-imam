@@ -1,8 +1,8 @@
 <svg width="1920" height="782" viewBox="0 0 1920 782" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="1920" height="782" fill="white"/>
-<mask id="mask0_2099_1945" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="782">
-<g opacity="0.7" clip-path="url(#clip0_2099_1945)">
-<g clip-path="url(#clip1_2099_1945)">
+<mask id="mask0_2160_2333" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="782">
+<g opacity="0.7" clip-path="url(#clip0_2160_2333)">
+<g clip-path="url(#clip1_2160_2333)">
 <line y1="9.5" x2="1920" y2="9.5" stroke="#E6E8EB"/>
 <line y1="101.2" x2="1920" y2="101.2" stroke="#E6E8EB"/>
 <line y1="192.9" x2="1920" y2="192.9" stroke="#E6E8EB"/>
@@ -13,7 +13,7 @@
 <line y1="651.4" x2="1920" y2="651.4" stroke="#E6E8EB"/>
 <line y1="743.1" x2="1920" y2="743.1" stroke="#E6E8EB"/>
 </g>
-<g clip-path="url(#clip2_2099_1945)">
+<g clip-path="url(#clip2_2160_2333)">
 <line x1="9.5" y1="1298" x2="9.5" stroke="#E6E8EB"/>
 <line x1="101.2" y1="1298" x2="101.2" stroke="#E6E8EB"/>
 <line x1="192.9" y1="1298" x2="192.9" stroke="#E6E8EB"/>
@@ -38,13 +38,16 @@
 </g>
 </g>
 </mask>
-<g mask="url(#mask0_2099_1945)">
-<g filter="url(#filter0_if_2099_1945)">
-<path d="M1844 782.5C1844 674.424 1793.17 570.775 1702.68 494.354C1612.19 417.933 1489.47 375 1361.5 375C1233.53 375 1110.81 417.933 1020.32 494.354C929.835 570.775 879 674.424 879 782.5L1361.5 782.5H1844Z" fill="#D9D9D9" fill-opacity="0.5" style="mix-blend-mode:multiply"/>
+<g mask="url(#mask0_2160_2333)">
+<g filter="url(#filter0_if_2160_2333)">
+<path d="M1891 782.5C1891 674.424 1840.17 570.775 1749.68 494.354C1659.19 417.933 1536.47 375 1408.5 375C1280.53 375 1157.81 417.933 1067.32 494.354C976.835 570.775 926 674.424 926 782.5L1408.5 782.5H1891Z" fill="#D9D9D9" fill-opacity="0.7" style="mix-blend-mode:multiply"/>
 </g>
 </g>
+<rect opacity="0.1" x="1209" y="659" width="78" height="78" fill="#FF6258"/>
+<rect opacity="0.1" x="1590" y="581" width="48" height="48" fill="#FF6258"/>
+<rect opacity="0.1" x="1145" y="501" width="36" height="36" fill="#FF6258"/>
 <defs>
-<filter id="filter0_if_2099_1945" x="866.9" y="362.9" width="989.2" height="514.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_if_2160_2333" x="913.9" y="362.9" width="989.2" height="514.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
@@ -52,16 +55,16 @@
 <feGaussianBlur stdDeviation="125"/>
 <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
 <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
-<feBlend mode="normal" in2="shape" result="effect1_innerShadow_2099_1945"/>
-<feGaussianBlur stdDeviation="6.05" result="effect2_foregroundBlur_2099_1945"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_2160_2333"/>
+<feGaussianBlur stdDeviation="6.05" result="effect2_foregroundBlur_2160_2333"/>
 </filter>
-<clipPath id="clip0_2099_1945">
+<clipPath id="clip0_2160_2333">
 <rect width="1920" height="782" fill="white"/>
 </clipPath>
-<clipPath id="clip1_2099_1945">
+<clipPath id="clip1_2160_2333">
 <rect width="1920" height="1298" fill="white"/>
 </clipPath>
-<clipPath id="clip2_2099_1945">
+<clipPath id="clip2_2160_2333">
 <rect width="1298" height="1920" fill="white" transform="matrix(0 -1 1 0 0 1298)"/>
 </clipPath>
 </defs>
