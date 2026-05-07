@@ -191,7 +191,7 @@
           class="absolute z-10
                 w-[20%] sm:w-[20%] md:w-[14%] lg:w-[11%]
                 bottom-[14%] sm:bottom-[18%] md:bottom-[11%]
-                left-[-1%] sm:left-[7%] md:left-[6%]
+                left-[2%] sm:left-[7%] md:left-[6%]
                 rotate-[-12deg]
                 animate-float-slow
                 transition-all duration-[800ms]
@@ -206,7 +206,7 @@
           class="absolute z-10
                 w-[19%] sm:w-[16%] md:w-[12%] lg:w-[9%]
                 bottom-[11%] sm:bottom-[11%] md:bottom-[8%]
-                right-[-2%] sm:right-[6%]
+                right-[4%] sm:right-[6%]
                 rotate-[8deg]
                 animate-float-slow
                 transition-all duration-[800ms]
@@ -268,7 +268,7 @@
           class="absolute z-10
                 w-[15%] sm:w-[12%] md:w-[11%] lg:w-[8%]
                 top-[25%] sm:top-[29%] md:top-[30%]
-                right-[6%] sm:right-[8%] md:right-[10%]
+                right-[8%] sm:right-[8%] md:right-[10%]
                 rotate-[35deg]
                 animate-float-slow
                 transition-all duration-[800ms]
