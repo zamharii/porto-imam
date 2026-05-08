@@ -711,12 +711,7 @@
         <div class="border-x border-b border-[#E5E7EB] px-6 py-10 sm:px-10 lg:px-16">
           <div class="flex items-center gap-8">
             <div class="h-10 w-[3px] bg-[#BC0003]"></div>
-            <h3
-              class="text-[28px] font-medium text-[#111827]"
-              style="font-family: 'Instrument Sans', sans-serif;"
-            >
-              Website
-            </h3>
+            <h3 class="text-[28px] font-medium text-[#111827]" style="font-family: 'Instrument Sans', sans-serif;">Website</h3>
             <div class="h-[1px] flex-1 bg-[#E5E7EB]"></div>
           </div>
         </div>
@@ -724,10 +719,126 @@
         <!-- PROJECT GRID: Website -->
         <div class="border-x border-[#E5E7EB]">
 
-          <!-- ROW 1: SL2 | True Rice -->
+          <!-- ROW 1: Satria | Intel -->
           <div class="grid grid-cols-1 lg:grid-cols-[45fr_55fr] items-stretch">
 
-            <!-- Sustainable Living Labs -->
+            <!-- Satria — order 1 mobile, kiri desktop -->
+            <article class="order-1 border-b border-r border-[#E5E7EB] px-6 pr-0 pt-14 pb-0 sm:px-10 sm:pr-10 sm:pt-20 lg:px-16 lg:pr-0 overflow-hidden flex flex-col">
+              <h4 class="text-[22px] font-medium text-[#111827]">Satria Nusa Enjinering</h4>
+              <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
+                Website perusahaan yang menyediakan informasi layanan energi, profil perusahaan, dan proyek.
+              </p>
+              <a href="https://satrianusa.group/" target="_blank"
+                class="group mt-6 self-start inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
+                Go to Website
+                <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">arrow_outward</span>
+              </a>
+              <div class="mt-10 flex-1 min-h-0 overflow-hidden">
+                <img
+                  src="/img/projects/satria.png"
+                  alt="Satria Nusa Enjinering"
+                  class="w-full lg:w-[132%] h-full max-w-none border-t border-l rounded-tl-xl border-[#E5E7EB] object-cover object-top"
+                />
+              </div>
+            </article>
+
+            <!-- Intel — order 2 mobile, kanan desktop -->
+            <article class="order-2 border-b border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden">
+              <h4 class="text-[22px] font-medium text-[#111827]">Intel AI4FW SS</h4>
+              <p class="mt-4 max-w-2xl text-[15px] leading-[1.8] text-[#2B384C]">
+                Dashboard admin untuk monitoring data dan pengelolaan program terpusat dalam satu sistem terintegrasi.
+              </p>
+              <a href="https://intel-digital-readiness-support.sustainablelivinglab.org/" target="_blank"
+                class="group mt-6 self-start inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
+                Go to Website
+                <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">arrow_outward</span>
+              </a>
+              <div class="relative mt-8" style="padding-top: 84px;">
+                <button
+                  v-for="(img, index) in getProjectImageOrder('intel')"
+                  :key="img.title"
+                  type="button"
+                  class="absolute left-0 rounded-tl-xl border-t border-l border-[#E5E7EB] bg-white transition-all duration-300 ease-out overflow-hidden"
+                  style="width: calc(100% + 4rem);"
+                  :class="[
+                    index === 0 ? '!relative z-40 !top-auto scale-100 opacity-100' : '',
+                    index === 1 ? 'top-[56px] z-30 scale-[0.96] opacity-80' : '',
+                    index === 2 ? 'top-[28px] z-20 scale-[0.92] opacity-60' : '',
+                    index === 3 ? 'top-0 z-10 scale-[0.88] opacity-40' : '',
+                  ]"
+                  @click="rotateProjectImages('intel', projectImageGroups.intel.findIndex((item) => item.title === img.title))"
+                >
+                  <div class="border-b border-[#E5E7EB] px-4 py-2 text-left text-[12px] text-[#6B7280]" style="font-family: 'Geist Mono', monospace;">
+                    {{ img.title }}
+                  </div>
+                  <img :src="img.image" :alt="img.title" class="w-full object-cover object-top" />
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- ROW 2: Climate | Annaunna -->
+          <div class="grid grid-cols-1 lg:grid-cols-[55fr_45fr] items-stretch">
+
+            <!-- Climate — order 2 mobile, kiri desktop -->
+            <article class="order-2 lg:order-1 border-b border-r border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden">
+              <h4 class="text-[22px] font-medium text-[#111827]">Climate Hub Asia</h4>
+              <p class="mt-4 max-w-2xl text-[15px] leading-[1.8] text-[#2B384C]">
+                Website Climate Hub Asia adalah platform yang fokus pada isu perubahan iklim di kawasan Asia.
+              </p>
+              <a href="https://climate-hub.asia/" target="_blank"
+                class="group mt-6 self-start inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
+                Go to Website
+                <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">arrow_outward</span>
+              </a>
+              <div class="relative mt-8" style="padding-top: 84px;">
+                <button
+                  v-for="(img, index) in getProjectImageOrder('climate')"
+                  :key="img.title"
+                  type="button"
+                  class="absolute left-0 rounded-tl-xl border-t border-l border-[#E5E7EB] bg-white transition-all duration-300 ease-out overflow-hidden"
+                  style="width: calc(100% + 4rem);"
+                  :class="[
+                    index === 0 ? '!relative z-40 !top-auto scale-100 opacity-100' : '',
+                    index === 1 ? 'top-[56px] z-30 scale-[0.96] opacity-80' : '',
+                    index === 2 ? 'top-[28px] z-20 scale-[0.92] opacity-60' : '',
+                    index === 3 ? 'top-0 z-10 scale-[0.88] opacity-40' : '',
+                  ]"
+                  @click="rotateProjectImages('climate', projectImageGroups.climate.findIndex((item) => item.title === img.title))"
+                >
+                  <div class="border-b border-[#E5E7EB] px-4 py-2 text-left text-[12px] text-[#6B7280]" style="font-family: 'Geist Mono', monospace;">
+                    {{ img.title }}
+                  </div>
+                  <img :src="img.image" :alt="img.title" class="w-full object-cover object-top" />
+                </button>
+              </div>
+            </article>
+
+            <!-- Annaunna — order 1 mobile, kanan desktop -->
+            <article class="order-1 lg:order-2 border-b border-[#E5E7EB] px-6 pr-0 pt-14 pb-0 sm:px-10 sm:pr-10 sm:pt-20 lg:pl-16 lg:pr-0 overflow-hidden flex flex-col">
+              <h4 class="text-[22px] font-medium text-[#111827]">Annaunna Trust</h4>
+              <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
+                Website organisasi yang menampilkan program sosial dan pemberdayaan masyarakat secara terstruktur.
+              </p>
+              <a href="https://www.annaunnatrust.org/" target="_blank"
+                class="group mt-6 self-start inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
+                Go to Website
+                <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">arrow_outward</span>
+              </a>
+              <div class="mt-10 flex-1 min-h-0 overflow-hidden">
+                <img
+                  src="/img/projects/annaunna.png"
+                  alt="Annaunna Trust"
+                  class="w-full lg:w-[132%] h-full max-w-none border-t border-l rounded-tl-xl border-[#E5E7EB] object-cover object-top"
+                />
+              </div>
+            </article>
+          </div>
+
+          <!-- ROW 3: SL2 | True Rice -->
+          <div class="grid grid-cols-1 lg:grid-cols-[45fr_55fr] items-stretch">
+
+            <!-- SL2 — order 1 mobile, kiri desktop -->
             <article class="order-1 border-b border-r border-[#E5E7EB] px-6 pr-0 pt-14 pb-0 sm:px-10 sm:pr-10 sm:pt-20 lg:px-16 lg:pr-0 overflow-hidden flex flex-col">
               <h4 class="text-[22px] font-medium text-[#111827]">Sustainable Living Labs</h4>
               <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
@@ -747,7 +858,7 @@
               </div>
             </article>
 
-            <!-- True Rice — card stack -->
+            <!-- True Rice — order 2 mobile, kanan desktop -->
             <article class="order-2 border-b border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden">
               <h4 class="text-[22px] font-medium text-[#111827]">True Rice</h4>
               <p class="mt-4 max-w-2xl text-[15px] leading-[1.8] text-[#2B384C]">
@@ -773,126 +884,7 @@
                   ]"
                   @click="rotateProjectImages('trueRice', projectImageGroups.trueRice.findIndex((item) => item.title === img.title))"
                 >
-                  <div class="border-b border-[#E5E7EB] px-4 py-2 text-left text-[12px] text-[#6B7280]"
-                    style="font-family: 'Geist Mono', monospace;">
-                    {{ img.title }}
-                  </div>
-                  <img :src="img.image" :alt="img.title" class="w-full object-cover object-top" />
-                </button>
-              </div>
-            </article>
-          </div>
-
-          <!-- ROW 2: Intel | Satria -->
-          <div class="grid grid-cols-1 lg:grid-cols-[55fr_45fr] items-stretch">
-
-            <!-- Intel — card stack -->
-            <article class="order-2 lg:order-1 border-b border-r border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden">
-              <h4 class="text-[22px] font-medium text-[#111827]">Intel AI4FW SS</h4>
-              <p class="mt-4 max-w-2xl text-[15px] leading-[1.8] text-[#2B384C]">
-                Dashboard admin untuk monitoring data dan pengelolaan program terpusat dalam satu sistem terintegrasi.
-              </p>
-              <a href="https://intel-digital-readiness-support.sustainablelivinglab.org/" target="_blank"
-                class="group mt-6 self-start inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
-                Go to Website
-                <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">arrow_outward</span>
-              </a>
-              <div class="relative mt-8" style="padding-top: 84px;">
-                <button
-                  v-for="(img, index) in getProjectImageOrder('intel')"
-                  :key="img.title"
-                  type="button"
-                  class="absolute left-0 rounded-tl-xl border-t border-l border-[#E5E7EB] bg-white transition-all duration-300 ease-out overflow-hidden"
-                  style="width: calc(100% + 4rem);"
-                  :class="[
-                    index === 0 ? '!relative z-40 !top-auto scale-100 opacity-100' : '',
-                    index === 1 ? 'top-[56px] z-30 scale-[0.96] opacity-80' : '',
-                    index === 2 ? 'top-[28px] z-20 scale-[0.92] opacity-60' : '',
-                    index === 3 ? 'top-0 z-10 scale-[0.88] opacity-40' : '',
-                  ]"
-                  @click="rotateProjectImages('intel', projectImageGroups.intel.findIndex((item) => item.title === img.title))"
-                >
-                  <div class="border-b border-[#E5E7EB] px-4 py-2 text-left text-[12px] text-[#6B7280]"
-                    style="font-family: 'Geist Mono', monospace;">
-                    {{ img.title }}
-                  </div>
-                  <img :src="img.image" :alt="img.title" class="w-full object-cover object-top" />
-                </button>
-              </div>
-            </article>
-
-            <!-- Satria -->
-            <article class="order-1 lg:order-2 border-b border-[#E5E7EB] px-6 pr-0 pt-14 pb-0 sm:px-10 sm:pr-10 sm:pt-20 lg:pl-16 lg:pr-0 overflow-hidden flex flex-col">
-              <h4 class="text-[22px] font-medium text-[#111827]">Satria Nusa Enjinering</h4>
-              <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
-                Website perusahaan yang menyediakan informasi layanan energi, profil perusahaan, dan proyek.
-              </p>
-              <a href="https://satrianusa.group/" target="_blank"
-                class="group mt-6 self-start inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
-                Go to Website
-                <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">arrow_outward</span>
-              </a>
-              <div class="mt-10 flex-1 min-h-0 overflow-hidden">
-                <img
-                  src="/img/projects/satria.png"
-                  alt="Satria Nusa Enjinering"
-                  class="w-full lg:w-[132%] h-full max-w-none border-t border-l rounded-tl-xl border-[#E5E7EB] object-cover object-top"
-                />
-              </div>
-            </article>
-          </div>
-
-          <!-- ROW 3: Annaunna | Climate -->
-          <div class="grid grid-cols-1 lg:grid-cols-[45fr_55fr] items-stretch">
-
-            <!-- Annaunna -->
-            <article class="order-1 border-b border-r border-[#E5E7EB] px-6 pr-0 pt-14 pb-0 sm:px-10 sm:pr-10 sm:pt-20 lg:px-16 lg:pr-0 overflow-hidden flex flex-col">
-              <h4 class="text-[22px] font-medium text-[#111827]">Annaunna Trust</h4>
-              <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
-                Website organisasi yang menampilkan program sosial dan pemberdayaan masyarakat secara terstruktur.
-              </p>
-              <a href="https://www.annaunnatrust.org/" target="_blank"
-                class="group mt-6 self-start inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
-                Go to Website
-                <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">arrow_outward</span>
-              </a>
-              <div class="mt-10 flex-1 min-h-0 overflow-hidden">
-                <img
-                  src="/img/projects/annaunna.png"
-                  alt="Annaunna Trust"
-                  class="w-full lg:w-[132%] h-full max-w-none border-t border-l rounded-tl-xl border-[#E5E7EB] object-cover object-top"
-                />
-              </div>
-            </article>
-
-            <!-- Climate — card stack -->
-            <article class="order-2 border-b px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden">
-              <h4 class="text-[22px] font-medium text-[#111827]">Climate Hub Asia</h4>
-              <p class="mt-4 max-w-2xl text-[15px] leading-[1.8] text-[#2B384C]">
-                Website Climate Hub Asia adalah platform yang fokus pada isu perubahan iklim di kawasan Asia.
-              </p>
-              <a href="https://climate-hub.asia/" target="_blank"
-                class="group mt-6 self-start inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
-                Go to Website
-                <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">arrow_outward</span>
-              </a>
-              <div class="relative mt-8" style="padding-top: 84px;">
-                <button
-                  v-for="(img, index) in getProjectImageOrder('climate')"
-                  :key="img.title"
-                  type="button"
-                  class="absolute left-0 rounded-tl-xl border-t border-l border-[#E5E7EB] bg-white transition-all duration-300 ease-out overflow-hidden"
-                  style="width: calc(100% + 4rem);"
-                  :class="[
-                    index === 0 ? '!relative z-40 !top-auto scale-100 opacity-100' : '',
-                    index === 1 ? 'top-[56px] z-30 scale-[0.96] opacity-80' : '',
-                    index === 2 ? 'top-[28px] z-20 scale-[0.92] opacity-60' : '',
-                    index === 3 ? 'top-0 z-10 scale-[0.88] opacity-40' : '',
-                  ]"
-                  @click="rotateProjectImages('climate', projectImageGroups.climate.findIndex((item) => item.title === img.title))"
-                >
-                  <div class="border-b border-[#E5E7EB] px-4 py-2 text-left text-[12px] text-[#6B7280]"
-                    style="font-family: 'Geist Mono', monospace;">
+                  <div class="border-b border-[#E5E7EB] px-4 py-2 text-left text-[12px] text-[#6B7280]" style="font-family: 'Geist Mono', monospace;">
                     {{ img.title }}
                   </div>
                   <img :src="img.image" :alt="img.title" class="w-full object-cover object-top" />
@@ -907,99 +899,60 @@
         <div class="border-x border-b border-[#E5E7EB] px-6 py-10 sm:px-10 lg:px-16">
           <div class="flex items-center gap-8">
             <div class="h-10 w-[3px] bg-[#BC0003]"></div>
-            <h3
-              class="text-[28px] font-medium text-[#111827]"
-              style="font-family: 'Instrument Sans', sans-serif;"
-            >
-              Apps
-            </h3>
+            <h3 class="text-[28px] font-medium text-[#111827]" style="font-family: 'Instrument Sans', sans-serif;">Apps</h3>
             <div class="h-[1px] flex-1 bg-[#E5E7EB]"></div>
           </div>
         </div>
 
         <!-- PROJECT GRID: Apps -->
         <div class="border-x border-[#E5E7EB]">
-
-          <!-- ROW 1: Let's Sparring | Roemah Padel -->
           <div class="grid grid-cols-1 lg:grid-cols-2 items-stretch">
-
-            <!-- Let's Sparring -->
             <article class="order-1 border-b border-r border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden flex flex-col">
               <h4 class="text-[22px] font-medium text-[#111827]">Let's Sparring</h4>
               <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
                 Platform olahraga untuk mencari lawan sparring, memilih jadwal, dan reservasi venue dalam satu aplikasi.
               </p>
               <div class="mt-16 flex justify-center overflow-hidden max-h-[420px] border-t border-l border-r rounded-tl-xl rounded-tr-xl border-[#E5E7EB]">
-                <img
-                  src="/img/freelance/ayosparing.svg"
-                  alt="Let's Sparring"
-                  class="w-full max-w-none object-contain object-top"
-                />
+                <img src="/img/freelance/ayosparing.svg" alt="Let's Sparring" class="w-full max-w-none object-contain object-top" />
               </div>
             </article>
-
-            <!-- Roemah Padel -->
             <article class="order-2 border-b border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden flex flex-col">
               <h4 class="text-[22px] font-medium text-[#111827]">Roemah Padel</h4>
               <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
                 Aplikasi booking lapangan padel untuk melihat ketersediaan, memilih waktu, dan reservasi secara online.
               </p>
               <div class="mt-16 flex justify-center overflow-hidden max-h-[420px] border-t border-l border-r rounded-tl-xl rounded-tr-xl border-[#E5E7EB]">
-                <img
-                  src="/img/freelance/roemah-padel.svg"
-                  alt="Roemah Padel"
-                  class="w-full max-w-none object-contain object-top"
-                />
+                <img src="/img/freelance/roemah-padel.svg" alt="Roemah Padel" class="w-full max-w-none object-contain object-top" />
               </div>
             </article>
           </div>
-
-          <!-- ROW 2: Go Instant Shop | DIGI - Qi Wellness -->
           <div class="grid grid-cols-1 lg:grid-cols-2 items-stretch">
-
-            <!-- Go Instant Shop -->
             <article class="order-1 border-b border-r border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden flex flex-col">
               <h4 class="text-[22px] font-medium text-[#111827]">Go Instant Shop</h4>
               <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
                 Aplikasi e-commerce yang menghubungkan pembeli dengan penjual lokal, pengiriman cepat, dan transaksi simpel.
               </p>
               <div class="mt-16 flex justify-center overflow-hidden max-h-[420px] border-t border-l border-r rounded-tl-xl rounded-tr-xl border-[#E5E7EB]">
-                <img
-                  src="/img/freelance/gis.svg"
-                  alt="Go Instant Shop"
-                  class="w-full max-w-none object-contain object-top"
-                />
+                <img src="/img/freelance/gis.svg" alt="Go Instant Shop" class="w-full max-w-none object-contain object-top" />
               </div>
             </article>
-
-            <!-- DIGI - Qi Wellness -->
             <article class="order-2 border-b border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden flex flex-col">
               <h4 class="text-[22px] font-medium text-[#111827]">DIGI – Qi Wellness</h4>
               <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
                 Aplikasi wellness untuk menemukan treatment yang sesuai, memilih terapis, dan reservasi dengan cepat.
               </p>
               <div class="mt-16 flex justify-center overflow-hidden max-h-[420px] border-t border-l border-r rounded-tl-xl rounded-tr-xl border-[#E5E7EB]">
-                <img
-                  src="/img/freelance/qi-wellness.svg"
-                  alt="DIGI - Qi Wellness"
-                  class="w-full max-w-none object-contain object-top"
-                />
+                <img src="/img/freelance/qi-wellness.svg" alt="DIGI - Qi Wellness" class="w-full max-w-none object-contain object-top" />
               </div>
             </article>
           </div>
-
         </div>
 
         <!-- CATEGORY: WhatsApp Sticker -->
         <div class="border-x border-b border-[#E5E7EB] px-6 py-10 sm:px-10 lg:px-16">
           <div class="flex items-center gap-8">
             <div class="h-10 w-[3px] bg-[#BC0003]"></div>
-            <h3
-              class="text-[28px] font-medium text-[#111827]"
-              style="font-family: 'Instrument Sans', sans-serif;"
-            >
-              WhatsApp Sticker
-            </h3>
+            <h3 class="text-[28px] font-medium text-[#111827]" style="font-family: 'Instrument Sans', sans-serif;">WhatsApp Sticker</h3>
             <div class="h-[1px] flex-1 bg-[#E5E7EB]"></div>
           </div>
         </div>
@@ -1007,38 +960,20 @@
         <!-- PROJECT GRID: WhatsApp Sticker -->
         <div class="border-x border-[#E5E7EB]">
           <div class="grid grid-cols-1 lg:grid-cols-[55fr_45fr] items-stretch">
-
-            <!-- LEFT: GIF GRID -->
-            <article class="order-1 border-[#E5E7EB] px-6 py-14 sm:px-10 sm:py-20 lg:px-16">
+            <article class="order-1 border-b lg:border-r border-[#E5E7EB] px-6 py-14 sm:px-10 sm:py-20 lg:px-16">
               <h4 class="text-[22px] font-medium text-[#111827]">RK Sticker Pack</h4>
               <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
                 Koleksi stiker WhatsApp bertemakan peralatan dan elektronik dengan animasi yang ekspresif dan menggemaskan.
               </p>
               <div class="mt-10 grid grid-cols-3 gap-4 lg:grid-cols-5">
-                <div
-                  v-for="gif in stickerGifs"
-                  :key="gif"
-                  class="aspect-square overflow-hidden rounded-xl border border-[#E5E7EB] flex items-center justify-center"
-                >
-                  <img
-                    :src="gif"
-                    :alt="gif"
-                    class="w-full h-full object-contain"
-                    loading="lazy"
-                  />
+                <div v-for="gif in stickerGifs" :key="gif" class="aspect-square overflow-hidden rounded-xl border border-[#E5E7EB] flex items-center justify-center">
+                  <img :src="gif" :alt="gif" class="w-full h-full object-contain" loading="lazy" />
                 </div>
               </div>
             </article>
-
-            <!-- RIGHT: PHONE IMAGE -->
-            <article class="order-2 border-[#E5E7EB] overflow-hidden flex items-end justify-center">
-              <img
-                src="/img/projects/Phone RK.png"
-                alt="WhatsApp Sticker Preview"
-                class="w-full object-contain object-bottom"
-              />
+            <article class="order-2 border-b border-[#E5E7EB] overflow-hidden flex items-end justify-center">
+              <img src="/img/projects/Phone RK.png" alt="WhatsApp Sticker Preview" class="w-full object-contain object-bottom" />
             </article>
-
           </div>
         </div>
 
@@ -1179,9 +1114,11 @@ const experienceItems = {
     company: 'PT Sustainable Living Lab',
     intro: '',
     responsibilities: [
-      'Mengembangkan wireframe dan prototype untuk dashboard dan sistem manajemen berbasis kebutuhan pengguna.',
-      'Berkolaborasi dengan tim dalam mengembangkan desain yang konsisten dan sesuai dengan kebutuhan platform.',
-      'Mengevaluasi tampilan dan alur penggunaan untuk meningkatkan efisiensi serta kemudahan dalam penggunaan sistem.'
+      'Mendesign dan mengembangkan wireframe dan prototype',
+      'Berkolaborasi dengan tim dalam mengembangkan desain yang konsisten dan sesuai dengan kebutuhan platform',
+      'Mengevaluasi tampilan dan alur penggunaan untuk meningkatkan efisiensi serta kemudahan dalam penggunaan sistem',
+      'Menyusun storyboard dan user journey untuk membantu proses perencanaan fitur dan pengalaman pengguna',
+      'Berdiskusi bersama client eksternal terkait pengembangan fitur, kebutuhan bisnis, dan arah produk'
     ]
   },
   sne: {
@@ -1191,9 +1128,11 @@ const experienceItems = {
     company: 'PT Satria Nusa Enjinering',
     intro: '',
     responsibilities: [
-      'Melakukan riset pengguna dan memahami kebutuhan untuk merancang solusi desain yang relevan.',
-      'Membuat wireframe dan prototype interaktif untuk membantu alur penggunaan menjadi lebih jelas dan terstruktur.',
-      'Bekerja sama dengan tim developer dalam mengimplementasikan desain yang konsisten dan mudah digunakan.'
+      'Melakukan riset pengguna dan memahami kebutuhan untuk merancang solusi desain yang relevan',
+      'Membuat wireframe dan prototype interaktif',
+      'Bekerja sama dengan tim developer dalam mengimplementasikan desain yang konsisten dan mudah digunakan',
+      'Menyusun struktur fitur dan alur penggunaan untuk mendukung pengembangan sistem yang lebih terarah dan efisien',
+      'Berkontribusi dalam diskusi tim terkait pengembangan produk digital dan optimalisasi tampilan antarmuka'
     ]
   },
   dro: {
