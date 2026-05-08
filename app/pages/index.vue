@@ -310,9 +310,9 @@
               My Portfolio
             </h2>
 
-            <!-- MOBILE IMAGE -->
-            <div class="flex justify-center lg:hidden">
-              <div class="group relative h-[430px] w-full max-w-[360px] overflow-visible rounded-2xl border border-[#E5E7EB] bg-white px-6 py-6">
+          <!-- MOBILE IMAGE -->
+          <div class="flex justify-center lg:hidden">
+            <div class="group relative h-[370px] w-full max-w-[320px] overflow-visible rounded-2xl border border-[#E5E7EB] bg-white px-5 py-5">
                 
                 <!-- TOP LINE -->
                 <div class="absolute left-1/2 top-8 h-[2px] w-52 -translate-x-1/2 bg-[#E5E7EB]"></div>
@@ -612,12 +612,12 @@
 
                 <!-- TABS -->
                 <div class="mb-8 flex justify-center overflow-x-auto xl:justify-start xl:pl-[120px]">
-                  <div class="relative inline-flex rounded-full border border-[#E5E7EB] bg-white p-2">
+                  <div class="relative inline-flex rounded-full border border-[#E5E7EB] bg-white p-1.5">
                     <button
                       v-for="(item, key) in experienceItems"
                       :key="key"
                       @click="activeExperience = key"
-                      class="rounded-full px-5 py-3 text-[13px] font-medium transition sm:px-6 sm:text-[14px]"
+                      class="rounded-full px-3 py-2 text-[11px] font-medium transition sm:px-5 sm:py-3 lg:px-6 sm:text-[14px]"
                       :class="activeExperience === key
                         ? 'relative z-10 bg-white text-[#111827] shadow-md'
                         : 'text-[#6B7280] hover:text-[#BC0003]'"
@@ -960,7 +960,7 @@
         <!-- PROJECT GRID: WhatsApp Sticker -->
         <div class="border-x border-[#E5E7EB]">
           <div class="grid grid-cols-1 lg:grid-cols-[55fr_45fr] items-stretch">
-            <article class="order-1 border-b lg:border-r border-[#E5E7EB] px-6 py-14 sm:px-10 sm:py-20 lg:px-16">
+            <article class="order-1 border-[#E5E7EB] px-6 py-14 sm:px-10 sm:py-20 lg:px-16">
               <h4 class="text-[22px] font-medium text-[#111827]">RK Sticker Pack</h4>
               <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
                 Koleksi stiker WhatsApp bertemakan peralatan dan elektronik dengan animasi yang ekspresif dan menggemaskan.
@@ -971,7 +971,7 @@
                 </div>
               </div>
             </article>
-            <article class="order-2 border-b border-[#E5E7EB] overflow-hidden flex items-end justify-center">
+            <article class="order-2 overflow-hidden flex items-end justify-center">
               <img src="/img/projects/Phone RK.png" alt="WhatsApp Sticker Preview" class="w-full object-contain object-bottom" />
             </article>
           </div>
