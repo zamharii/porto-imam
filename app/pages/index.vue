@@ -1277,22 +1277,36 @@ type ProjectImage = {
 // Keep these paths pointing to files inside /public so Vite won't treat them as module imports.
 const projectImageGroups = {
   trueRice: [
-    { title: 'Landing Page', image: '/img/projects/truerice1.png' },
-    { title: 'Dashboard', image: '/img/projects/truerice2.png' },
-    { title: 'Queue Analyzing', image: '/img/projects/truerice3.png' },
-    { title: 'Sample Collection', image: '/img/projects/truerice4.png' },
+    { title: 'Landing Page', image: '/img/projects/truerice1-Landing Page.png' },
+    { title: 'Dashboard', image: '/img/projects/truerice2-Dashboard.png' },
+    { title: 'Sample Collection', image: '/img/projects/truerice3-Sample Collection.png' },
+    { title: 'Queue Analyzing', image: '/img/projects/truerice4-Queue Analyzing.png' },
+    { title: 'User Management', image: '/img/projects/truerice5-User Management.png' },
+    { title: 'Visualization', image: '/img/projects/truerice6-Visualization.png' },
+    { title: 'Detailed Log', image: '/img/projects/truerice7-Detailed Log.png' },
+    { title: 'Certificate', image: '/img/projects/truerice8-Certificate.png' },
   ],
+
   intel: [
-    { title: 'Dashboard', image: '/img/projects/intel1.png' },
-    { title: 'Partner Management', image: '/img/projects/intel2.png' },
-    { title: 'Content Management', image: '/img/projects/intel3.png' },
-    { title: 'Course Management', image: '/img/projects/intel4.png' },
+    { title: 'Dashboard', image: '/img/projects/intel1-Dashboard.png' },
+    { title: 'Partner Management', image: '/img/projects/intel2-Partner Management.png' },
+    { title: 'Content Management', image: '/img/projects/intel3-Content Management.png' },
+    { title: 'Course Management', image: '/img/projects/intel4-Course Management.png' },
+    { title: 'Ai Degrees', image: '/img/projects/intel5-Ai Degrees.png' },
+    { title: 'Partner Dashboard', image: '/img/projects/intel6-Partner Dashboard.png' },
+    { title: 'Partner Tracker', image: '/img/projects/intel7-Partner Tracker.png' },
+    { title: 'Email Template', image: '/img/projects/intel8-Email Template.png' },
   ],
+
   climate: [
-    { title: 'Landing Page', image: '/img/projects/climate1.png' },
-    { title: 'Dashboard', image: '/img/projects/climate2.png' },
-    { title: 'Database', image: '/img/projects/climate3.png' },
-    { title: 'Account Management', image: '/img/projects/climate4.png' },
+    { title: 'Landing Page', image: '/img/projects/climate1-Landing Page.png' },
+    { title: 'Dashboard', image: '/img/projects/climate2-Dashboard.png' },
+    { title: 'Database', image: '/img/projects/climate3-Database.png' },
+    { title: 'Account Management', image: '/img/projects/climate4-Account Management.png' },
+    { title: 'Internal Post', image: '/img/projects/climate5-Internal Post.png' },
+    { title: 'Add Solution', image: '/img/projects/climate6-Add Solution.png' },
+    { title: 'Adaptation Category', image: '/img/projects/climate7-Adaptation Category.png' },
+    { title: 'Profile Management', image: '/img/projects/climate8-Profile Management.png' },
   ],
 } satisfies Record<string, ProjectImage[]>
 
