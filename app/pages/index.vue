@@ -907,44 +907,34 @@
         <!-- PROJECT GRID: Apps -->
         <div class="border-x border-[#E5E7EB]">
           <div class="grid grid-cols-1 lg:grid-cols-2 items-stretch">
-            <article class="order-1 border-b border-r border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden flex flex-col">
-              <h4 class="text-[22px] font-medium text-[#111827]">Let's Sparring</h4>
+
+            <article
+              v-for="(item, index) in freelanceItems"
+              :key="item.name"
+              class="border-b border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden flex flex-col"
+              :class="index % 2 === 0 ? 'lg:border-r' : ''"
+            >
+
+              <h4 class="text-[22px] font-medium text-[#111827]">
+                {{ item.name }}
+              </h4>
+
               <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
-                Platform olahraga untuk mencari lawan sparring, memilih jadwal, dan reservasi venue dalam satu aplikasi.
+                {{ item.description }}
               </p>
+
               <div class="mt-16 flex justify-center overflow-hidden max-h-[420px] border-t border-l border-r rounded-tl-xl rounded-tr-xl border-[#E5E7EB]">
-                <img src="/img/freelance/ayosparing.svg" alt="Let's Sparring" class="w-full max-w-none object-contain object-top" />
+
+                <img
+                  :src="item.image"
+                  :alt="item.name"
+                  class="w-full max-w-none object-contain object-top"
+                />
+
               </div>
+
             </article>
-            <article class="order-2 border-b border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden flex flex-col">
-              <h4 class="text-[22px] font-medium text-[#111827]">Roemah Padel</h4>
-              <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
-                Aplikasi booking lapangan padel untuk melihat ketersediaan, memilih waktu, dan reservasi secara online.
-              </p>
-              <div class="mt-16 flex justify-center overflow-hidden max-h-[420px] border-t border-l border-r rounded-tl-xl rounded-tr-xl border-[#E5E7EB]">
-                <img src="/img/freelance/roemah-padel.svg" alt="Roemah Padel" class="w-full max-w-none object-contain object-top" />
-              </div>
-            </article>
-          </div>
-          <div class="grid grid-cols-1 lg:grid-cols-2 items-stretch">
-            <article class="order-1 border-b border-r border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden flex flex-col">
-              <h4 class="text-[22px] font-medium text-[#111827]">Go Instant Shop</h4>
-              <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
-                Aplikasi e-commerce yang menghubungkan pembeli dengan penjual lokal, pengiriman cepat, dan transaksi simpel.
-              </p>
-              <div class="mt-16 flex justify-center overflow-hidden max-h-[420px] border-t border-l border-r rounded-tl-xl rounded-tr-xl border-[#E5E7EB]">
-                <img src="/img/freelance/gis.svg" alt="Go Instant Shop" class="w-full max-w-none object-contain object-top" />
-              </div>
-            </article>
-            <article class="order-2 border-b border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden flex flex-col">
-              <h4 class="text-[22px] font-medium text-[#111827]">DIGI – Qi Wellness</h4>
-              <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
-                Aplikasi wellness untuk menemukan treatment yang sesuai, memilih terapis, dan reservasi dengan cepat.
-              </p>
-              <div class="mt-16 flex justify-center overflow-hidden max-h-[420px] border-t border-l border-r rounded-tl-xl rounded-tr-xl border-[#E5E7EB]">
-                <img src="/img/freelance/qi-wellness.svg" alt="DIGI - Qi Wellness" class="w-full max-w-none object-contain object-top" />
-              </div>
-            </article>
+
           </div>
         </div>
 
@@ -1241,28 +1231,42 @@ const freelanceItems: FreelanceItem[] = [
   {
     name: "Let's Sparring",
     title: 'Aplikasi pemesanan lapangan olahraga',
-    description: 'Dengan fokus pada kemudahan reservasi.',
+    description: 'Platform olahraga untuk mencari lawan sparring, memilih jadwal, dan reservasi venue dalam satu aplikasi.',
     image: '/img/freelance/ayosparing.svg',
     to: '/lets-sparring'
   },
   {
     name: 'Roemah Padel',
     title: 'Aplikasi pemesanan lapangan padel',
-    description: 'Memudahkan pengguna dalam mengatur waktu bermain.',
+    description: 'Aplikasi booking lapangan padel untuk melihat ketersediaan, memilih waktu, dan reservasi secara online.',
     image: '/img/freelance/roemah-padel.svg',
     to: '/roemah-padel'
   },
   {
+    name: 'Arena Padel',
+    title: 'Aplikasi booking lapangan padel',
+    description: 'Memudahkan pengguna mencari lapangan, memilih jadwal, dan melakukan reservasi.',
+    image: '/img/freelance/arena-padel.svg',
+    to: '/arena-padel'
+  },
+  {
+    name: 'Padel 360',
+    title: 'Aplikasi manajemen dan booking padel',
+    description: 'Platform untuk mendukung reservasi, pengelolaan lapangan, dan pengalaman bermain padel.',
+    image: '/img/freelance/padel360.svg',
+    to: '/padel-360'
+  },
+  {
     name: 'Go Instant Shop',
     title: 'Aplikasi e-commerce sederhana',
-    description: 'Dengan fitur pencarian dan pembelian produk.',
+    description: 'Aplikasi e-commerce yang menghubungkan pembeli dengan penjual lokal, pengiriman cepat, dan transaksi simpel.',
     image: '/img/freelance/gis.svg',
     to: '/gis'
   },
   {
     name: 'DIGI - Qi Wellness',
     title: 'Aplikasi Pemesanan Layanan Spa',
-    description: 'Dirancang untuk memudahkan pengguna dalam menentukan jenis perawatan, melakukan reservasi dengan cepat.',
+    description: 'Aplikasi wellness untuk menemukan treatment yang sesuai, memilih terapis, dan reservasi dengan cepat.',
     image: '/img/freelance/qi-wellness.svg',
     to: '/qi-wellness'
   }
