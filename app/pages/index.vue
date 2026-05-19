@@ -726,7 +726,8 @@
             <article class="order-1 border-b border-r border-[#E5E7EB] px-6 pr-0 pt-14 pb-0 sm:px-10 sm:pr-10 sm:pt-20 lg:px-16 lg:pr-0 overflow-hidden flex flex-col">
               <h4 class="text-[22px] font-medium text-[#111827]">Satria Nusa Enjinering</h4>
               <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
-                Website perusahaan yang menyediakan informasi layanan energi, profil perusahaan, dan proyek.
+                Website perusahaan yang menyediakan informasi layanan
+                <br>energi, profil perusahaan, dan proyek.
               </p>
               <a href="https://satrianusa.group/" target="_blank"
                 class="group mt-6 self-start inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
