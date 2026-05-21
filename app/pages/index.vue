@@ -939,6 +939,62 @@
           </div>
         </div>
 
+<!-- CATEGORY: Landing Page -->
+<div class="border-x border-b border-[#E5E7EB] px-6 py-10 sm:px-10 lg:px-16">
+  <div class="flex items-center gap-8">
+    
+    <div class="h-10 w-[3px] bg-[#BC0003]"></div>
+
+    <h3
+      class="text-[28px] font-medium text-[#111827]"
+      style="font-family: 'Instrument Sans', sans-serif;"
+    >
+      Design for Campaigns Ads
+    </h3>
+
+    <div class="h-[1px] flex-1 bg-[#E5E7EB]"></div>
+
+  </div>
+</div>
+
+<!-- PROJECT GRID: Landing Page -->
+<div class="border-x border-[#E5E7EB]">
+  <article class="border-b border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden">
+
+    <!-- TEXT -->
+    <div class="max-w-3xl">
+      <h4 class="text-[22px] font-medium text-[#111827]">
+        Landing Page
+      </h4>
+
+      <p class="mt-4 text-[15px] leading-[1.8] text-[#2B384C]">
+        Desain landing page untuk kebutuhan iklan marketplace seperti TikTok Ads,
+        Facebook Ads, dan Instagram Ads yang diarahkan langsung ke WhatsApp.
+      </p>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="mt-16 overflow-hidden rounded-tl-2xl rounded-tr-2xl border-t border-l border-r border-[#E5E7EB] bg-white">
+
+      <!-- DESKTOP -->
+      <img
+        src="/img/projects/Phone LP.png"
+        alt="Ads Landing Page Preview"
+        class="hidden w-full object-cover object-top sm:block"
+      />
+
+      <!-- MOBILE -->
+      <img
+        src="/img/projects/Phone LP Mobile.png"
+        alt="Ads Landing Page Mobile Preview"
+        class="block w-full object-cover object-top sm:hidden"
+      />
+
+    </div>
+
+  </article>
+</div>
+
         <!-- CATEGORY: WhatsApp Sticker -->
         <div class="border-x border-b border-[#E5E7EB] px-6 py-10 sm:px-10 lg:px-16">
           <div class="flex items-center gap-8">
