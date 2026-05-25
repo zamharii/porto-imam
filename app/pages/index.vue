@@ -46,9 +46,6 @@
             class="inline-flex items-center gap-3 rounded-full bg-[#FF2D20] px-6 py-3 text-[16px] font-reguler text-white transition hover:bg-[#FF6258]"
             style="font-family: 'Inter', sans-serif;"
           >
-            <span class="material-symbols-outlined text-[18px] leading-none">
-              download
-            </span>
             My Resume
           </a>
         </div>
@@ -112,7 +109,7 @@
     
     <!-- HERO SECTION -->
     <section
-      class="relative min-h-screen w-full bg-[#FBFAF5] 
+      class="relative min-h-screen w-full bg-white
             bg-no-repeat bg-cover bg-[center_top] 
             md:bg-cover md:bg-center"
       style="background-image: url('/img/hero/bg-header.svg')"
@@ -723,7 +720,7 @@
           <div class="grid grid-cols-1 lg:grid-cols-[45fr_55fr] items-stretch">
 
             <!-- Satria — order 1 mobile, kiri desktop -->
-            <article class="order-1 border-b border-r border-[#E5E7EB] px-6 pr-0 pt-14 pb-0 sm:px-10 sm:pr-10 sm:pt-20 lg:px-16 lg:pr-0 overflow-hidden flex flex-col"  data-delay="150">
+            <article class="order-1 border-b border-r border-[#E5E7EB] px-6 pr-0 pt-14 pb-0 sm:px-10 sm:pr-10 sm:pt-20 lg:px-16 lg:pr-0 overflow-hidden flex flex-col">
               <h4 class="text-[22px] font-medium text-[#111827]">Satria Nusa Enjinering</h4>
               <p class="mt-4 max-w-xl text-[15px] leading-[1.8] text-[#2B384C]">
                 Website perusahaan yang menyediakan informasi layanan
@@ -759,7 +756,7 @@
                   v-for="(img, index) in getProjectImageOrder('intel')"
                   :key="img.title"
                   type="button"
-                  class="absolute left-0 rounded-tl-xl border-t border-l border-[#E5E7EB] bg-white transition-all duration-700 ease-out overflow-hidden"
+                  class="absolute left-0 rounded-tl-xl border-t border-l border-[#E5E7EB] bg-white transition-all duration-300 ease-out overflow-hidden"
                   style="width: calc(100% + 4rem);"
                   :class="[
                     index === 0 ? '!relative z-40 !top-auto scale-100 opacity-100' : '',
@@ -797,7 +794,7 @@
                   v-for="(img, index) in getProjectImageOrder('climate')"
                   :key="img.title"
                   type="button"
-                  class="absolute left-0 rounded-tl-xl border-t border-l border-[#E5E7EB] bg-white transition-all duration-700 ease-out overflow-hidden"
+                  class="absolute left-0 rounded-tl-xl border-t border-l border-[#E5E7EB] bg-white transition-all duration-300 ease-out overflow-hidden"
                   style="width: calc(100% + 4rem);"
                   :class="[
                     index === 0 ? '!relative z-40 !top-auto scale-100 opacity-100' : '',
@@ -848,7 +845,7 @@
               <a href="https://sustainablelivinglab.org/" target="_blank"
                 class="group mt-6 self-start inline-flex items-center gap-2 rounded-md border border-[#D1D5DB] px-4 py-2 text-[14px] text-[#2B384C] transition hover:border-[#BC0003] hover:bg-[#FFEBEB] hover:text-[#BC0003]">
                 Go to Website
-                <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-700 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">arrow_outward</span>
+                <span class="material-symbols-outlined text-[16px] text-[#BC0003] transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5">arrow_outward</span>
               </a>
               <div class="mt-10 flex-1 min-h-0 overflow-hidden">
                 <img
@@ -939,61 +936,61 @@
           </div>
         </div>
 
-        <!-- CATEGORY: Landing Page -->
-        <div class="border-x border-b border-[#E5E7EB] px-6 py-10 sm:px-10 lg:px-16">
-          <div class="flex items-center gap-8">
-            
-            <div class="h-10 w-[3px] bg-[#BC0003]"></div>
+<!-- CATEGORY: Landing Page -->
+<div class="border-x border-b border-[#E5E7EB] px-6 py-10 sm:px-10 lg:px-16">
+  <div class="flex items-center gap-8">
+    
+    <div class="h-10 w-[3px] bg-[#BC0003]"></div>
 
-            <h3
-              class="text-[28px] font-medium text-[#111827]"
-              style="font-family: 'Instrument Sans', sans-serif;"
-            >
-              Design for Campaigns Ads
-            </h3>
+    <h3
+      class="text-[28px] font-medium text-[#111827]"
+      style="font-family: 'Instrument Sans', sans-serif;"
+    >
+      Design for Campaigns Ads
+    </h3>
 
-            <div class="h-[1px] flex-1 bg-[#E5E7EB]"></div>
+    <div class="h-[1px] flex-1 bg-[#E5E7EB]"></div>
 
-          </div>
-        </div>
+  </div>
+</div>
 
-        <!-- PROJECT GRID: Landing Page -->
-        <div class="border-x border-[#E5E7EB]">
-          <article class="border-b border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden">
+<!-- PROJECT GRID: Landing Page -->
+<div class="border-x border-[#E5E7EB]">
+  <article class="border-b border-[#E5E7EB] px-6 pt-14 pb-0 sm:px-10 sm:pt-20 lg:px-16 overflow-hidden">
 
-            <!-- TEXT -->
-            <div class="max-w-3xl">
-              <h4 class="text-[22px] font-medium text-[#111827]">
-                Landing Page
-              </h4>
+    <!-- TEXT -->
+    <div class="max-w-3xl">
+      <h4 class="text-[22px] font-medium text-[#111827]">
+        Landing Page
+      </h4>
 
-              <p class="mt-4 text-[15px] leading-[1.8] text-[#2B384C]">
-                Desain landing page untuk kebutuhan iklan marketplace seperti TikTok Ads,
-                Facebook Ads, dan Instagram Ads yang diarahkan langsung ke WhatsApp.
-              </p>
-            </div>
+      <p class="mt-4 text-[15px] leading-[1.8] text-[#2B384C]">
+        Desain landing page untuk kebutuhan iklan marketplace seperti TikTok Ads,
+        Facebook Ads, dan Instagram Ads yang diarahkan langsung ke WhatsApp.
+      </p>
+    </div>
 
-            <!-- IMAGE -->
-            <div class="mt-16 overflow-hidden rounded-tl-2xl rounded-tr-2xl border-t border-l border-r border-[#E5E7EB] bg-white">
+    <!-- IMAGE -->
+    <div class="mt-16 overflow-hidden rounded-tl-2xl rounded-tr-2xl border-t border-l border-r border-[#E5E7EB] bg-white">
 
-              <!-- DESKTOP -->
-              <img
-                src="/img/projects/Phone LP.png"
-                alt="Ads Landing Page Preview"
-                class="hidden w-full object-cover object-top sm:block"
-              />
+      <!-- DESKTOP -->
+      <img
+        src="/img/projects/Phone LP.png"
+        alt="Ads Landing Page Preview"
+        class="hidden w-full object-cover object-top sm:block"
+      />
 
-              <!-- MOBILE -->
-              <img
-                src="/img/projects/Phone LP Mobile.png"
-                alt="Ads Landing Page Mobile Preview"
-                class="block w-full object-cover object-top sm:hidden"
-              />
+      <!-- MOBILE -->
+      <img
+        src="/img/projects/Phone LP Mobile.png"
+        alt="Ads Landing Page Mobile Preview"
+        class="block w-full object-cover object-top sm:hidden"
+      />
 
-            </div>
+    </div>
 
-          </article>
-        </div>
+  </article>
+</div>
 
         <!-- CATEGORY: WhatsApp Sticker -->
         <div class="border-x border-b border-[#E5E7EB] px-6 py-10 sm:px-10 lg:px-16">
@@ -1149,60 +1146,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, reactive, ref, onMounted, onBeforeUnmount } from 'vue'
-
-let revealObserver: IntersectionObserver | null = null
-
-onMounted(() => {
-  revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return
-
-        const el = entry.target as HTMLElement
-
-        el.classList.add('is-visible')
-
-        revealObserver?.unobserve(el)
-      })
-    },
-    {
-      threshold: 0.02,
-    }
-  )
-
-  document.querySelectorAll('section, article').forEach((el) => {
-    el.classList.add('reveal-auto')
-    revealObserver?.observe(el)
-  })
-})
-
-onBeforeUnmount(() => {
-  revealObserver?.disconnect()
-  revealObserver = null
-})
-
-let projectAutoRotateTimer: ReturnType<typeof setInterval> | null = null
-
-const autoRotateProjectImages = () => {
-  const groups = Object.keys(projectImageGroups) as ProjectImageGroupKey[]
-
-  groups.forEach((group) => {
-    const len = projectImageGroups[group].length
-    projectImageActiveIndex[group] = (projectImageActiveIndex[group] + 1) % len
-  })
-}
-
-onMounted(() => {
-  projectAutoRotateTimer = setInterval(autoRotateProjectImages, 5000)
-})
-
-onBeforeUnmount(() => {
-  if (projectAutoRotateTimer) {
-    clearInterval(projectAutoRotateTimer)
-    projectAutoRotateTimer = null
-  }
-})
+import { computed, reactive, ref } from 'vue'
 
 const activeExperience = ref('sl2')
 
@@ -1609,29 +1553,5 @@ html {
 
 .border-dashed-custom::after {
   right: 0;
-}
-</style>
-
-<style>
-.reveal-auto {
-  opacity: 0;
-  transform: translateY(48px);
-  transition:
-    opacity 900ms ease,
-    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-
-.reveal-auto.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal-auto {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
 }
 </style>
