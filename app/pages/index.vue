@@ -41,8 +41,8 @@
 
           <!-- RESUME -->
           <a
-            href="/cv/cv-imam-zamhari.pdf"
-            download="CV-Imam-Zamhari.pdf"
+            href="/cv/CV Imam Zamhari.pdf"
+            download="CV Imam Zamhari.pdf"
             class="inline-flex items-center gap-3 rounded-full bg-[#FF2D20] px-6 py-3 text-[16px] font-reguler text-white transition hover:bg-[#FF6258]"
             style="font-family: 'Inter', sans-serif;"
           >
@@ -94,8 +94,8 @@
 
           <!-- RESUME -->
           <a
-            href="/cv/cv-imam-zamhari.pdf"
-            download="CV-Imam-Zamhari.pdf"
+            href="/cv/CV Imam Zamhari.pdf"
+            download="CV Imam Zamhari.pdf"
             class="flex w-full items-center justify-center gap-3 rounded-md bg-[#FF2D20] px-6 py-4 text-[16px] text-white transition hover:bg-[#FF6258]"
             style="font-family: 'Inter', sans-serif;"
           >
